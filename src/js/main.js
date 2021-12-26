@@ -1,6 +1,6 @@
 jQuery(function () {
   "use strict";
-  // open mobil menu and hamburger btn
+  // open mobile menu and hamburger btn
   $(".nav-toggle-btn").on("click", function (e) {
     $(".nav-toggle-btn, .nav-backdrop-container").toggleClass("active");
   });

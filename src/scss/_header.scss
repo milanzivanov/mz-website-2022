@@ -14,13 +14,38 @@
     height: 60px;
     width: 60px;
     z-index: 10;
+    margin-left: 5%;
 
     @include breakpoint(desktop) {
         height: 100px;
         width: 100px;
+        margin-left: 0;
+    }
+}
+
+nav.nav-desktop {
+    display: none;
+}
+
+@include breakpoint(desktop) {
+    nav.nav-desktop {
+        display: flex;
+        z-index: 10;
+    }
+
+    ul.nav-desktop__list {
+        display: flex;
+    }
+
+    .nav-desktop__link {
+        display: inline-block;
+        color: #fff;
+        font-size: 1.4rem;
+        margin-left: 3rem;
     }
 
 }
+
 
 .header__logo--svg-color {
     color: #fff;
@@ -29,6 +54,11 @@
 .header__btn {
     position: relative;
     z-index: 101;
+    display: inline-block;
+
+    @include breakpoint(desktop) {
+        display: none;
+    }
 }
 
 // hamburger icon
