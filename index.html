@@ -8,13 +8,28 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">     
     <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./node_modules/magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./dist/style.css">
 
     <script defer src="./node_modules/jquery/dist/jquery.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+
+
     <script defer src="./node_modules/slick-carousel/slick/slick.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script defer src="./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script defer src="./node_modules/particles.js/particles.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script defer src="./dist/main.js"></script>
 
     <meta 
@@ -40,10 +55,10 @@
 
                 <nav class="nav-desktop">
                     <ul class="nav-desktop__list">
-                        <li class="nav-desktop__item"><a class="scrollTo nav-desktop__link" href="#sectionHome">Home</a</li>
-                        <li class="nav-desktop__item"><a class="scrollTo nav-desktop__link" href="#sectionAbout">About</a></li>
-                        <li class="nav-desktop__item"><a class="scrollTo nav-desktop__link" href="#sectionProjects">Portfolio</a></li>
-                        <li class="nav-desktop__item"><a class="scrollTo nav-desktop__link" href="#sectionContact">Contact</a></li>
+                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionHome">Home</a</li>
+                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionAbout">About</a></li>
+                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionProjects">Portfolio</a></li>
+                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionContact">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -64,10 +79,10 @@
         <div class="hero-content">
                 <div class="hero-content__text">
                     <h1 class="hero-content__title hero__title--primary">
-                        I'm Milan.
+                        I'm <span>Milan.</span>
                     </h1>
                     <h2 class="hero-content__title hero__title--secondery">
-                        <span>Frontend Developer</span> 
+                        <span>Frontend Developer.</span> 
                     </h2>
                 </div>
             </div>
@@ -77,10 +92,10 @@
         <div class="nav-backdrop-container">
             <nav class="nav">
                 <ul class="nav__list">
-                    <li><a class="scrollTo" href="#sectionHome">Home</a</li>
-                    <li><a class="scrollTo" href="#sectionAbout">About</a></li>
-                    <li><a class="scrollTo" href="#sectionProjects">Portfolio</a></li>
-                    <li><a class="scrollTo" href="#sectionContact">Contact</a></li>
+                    <li><a href="#sectionHome">Home</a</li>
+                    <li><a href="#sectionAbout">About</a></li>
+                    <li><a href="#sectionProjects">Portfolio</a></li>
+                    <li><a href="#sectionContact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -97,12 +112,11 @@
             </div>
             <div class="about-container__box">
                 <div class="about-container__text about-container__text--top">
-                    <p>
+                    <p class="about-container__paragraph about-container__paragraph--border-bottom">
                         Hello, my name is <strong>Milan Živanov</strong> and I graduated in <strong>Higher Education Technical School of Professional Studies of Novi Sad(Serbia)</strong> with a Bachelor of Graphic Engineering and Design.
                         I've been in the printing business for a long time and I mastered the knowledge of prepress and CTP work on printers.
                     </p>
-                    <br>
-                    <p>
+                    <p class="about-container__paragraph">
                         Over time I have developed an interest in web development , so I educated myself in <strong>HTML5/CSS3, JS, jQuery, Git, SCSS, RWD, Bootstrap, Gulp, Ts, Flexbox, Css Grid... which led me to more advanced technology</strong>. I am particularly interested in Frontend.
                     </p>
                 </div>

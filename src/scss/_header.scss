@@ -43,9 +43,7 @@ nav.nav-desktop {
         font-size: 1.4rem;
         margin-left: 3rem;
     }
-
 }
-
 
 .header__logo--svg-color {
     color: #fff;
@@ -107,13 +105,13 @@ nav.nav-desktop {
             }
             &:before {
             top: -11px;
-                left: 3px;
-                width: 28px;
+                left: 0;
+                width: 34px;
             }
             &:after {
             top: 11px;
-                left: 6px;
-                width: 22px;
+                left: 0;
+                width: 34px;
             }
         }
 
@@ -188,12 +186,12 @@ ul.nav__list {
     li {
         a {
             color: #f2f2f2;
-            font-size: 2.5rem;
+            font-size: 2rem;
             padding-bottom: 1rem;
             display: block;
             text-decoration: none;
             text-align: start;
-            text-transform: capitalize;
+            text-transform: uppercase;
             transition: all .3s ease-in-out;
 
             @include breakpoint(desktop) {

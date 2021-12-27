@@ -49,13 +49,14 @@ main.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    // align-items: flex-end;
 }
   
 .hero-content__text { 
     position: relative;
-    padding: 2rem;
+    padding: .5rem;
     width: 95%;
-    font-family: 'Roboto' sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-style: normal;
     text-align: left;
@@ -64,6 +65,7 @@ main.container {
 
     @include breakpoint(desktop) {
         background-color: rgb(6, 6, 6, .7);
+        padding: 1.5rem;
         background: linear-gradient(
             45deg,rgb(44 134 169 / 70%),#063250,#0071bc,#000);
         background-size: 400% 400%;
@@ -74,12 +76,22 @@ main.container {
 
 .hero-content__title {
     width: 100%;
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
 
     @include breakpoint(desktop) {
-        font-size: 4rem;
-        line-height: 4rem;
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+}
+
+.hero__title--primary {
+    span {
+        display: block;
+
+        @include breakpoint(desktop) {
+            display: inline-block;
+        }
     }
 }
 
@@ -162,6 +174,7 @@ main.container {
     right: 0;
     bottom: 0;
 }
+
 .about-container__text {
     position: relative;
     z-index: 5;
@@ -173,13 +186,22 @@ main.container {
     @include breakpoint(desktop) {
         font-size: 1.125rem;
     }
+}
 
+.about-container__paragraph {
+    padding: 2rem 0;
+}
+
+.about-container__paragraph--border-bottom {
+    border-bottom: 1px solid #d6e2ed;
 }
 
 .about__title {
-    width: 60%;
+    width: 80%;
     z-index: 5;
-    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
     color: #23a6d5;
     padding: 1rem;
     position: absolute;
@@ -190,7 +212,8 @@ main.container {
     box-shadow: 1px 1px 1px #d6e2ed;
 
     @include breakpoint(desktop) {
-        font-size: 2.5rem;
+        width: 70%;
+        font-size: 2rem;
         padding: 2rem;
     }
 }
@@ -288,8 +311,9 @@ span.about__experience--title {
 h2.projects-title {
     padding: 2rem 0;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: #23a6d5;
+    text-transform: uppercase;
 
     @include breakpoint(desktop) {
         font-size: 2.5rem;
@@ -343,7 +367,7 @@ h2.projects-title {
     padding: 2rem;
     align-items: flex-start;
     box-shadow: 1px 1px 1px #d6e2ed;
-    border-radius: 5px;
+    // border-radius: 5px;
 }
 
 .text-container--title {
@@ -353,7 +377,10 @@ h2.projects-title {
 }
 
 .text-container--description {
-    padding-bottom: 3rem;
+    box-shadow: 1px 1px 1px #d6e2ed;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    background: #fff;
 }
 
 .btn {
@@ -364,7 +391,7 @@ h2.projects-title {
     letter-spacing: 2px;
     display: inline-block;
     font-weight: 700;
-    border-radius: 5px;
+    // border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
     transition: transform .3s;
     outline: none;
@@ -399,7 +426,7 @@ section.contact {
 .contact__form-container {
     box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     background: #fff;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 60rem;
     text-align: right;
     border-radius: 5px;
