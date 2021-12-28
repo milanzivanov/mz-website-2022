@@ -42,6 +42,11 @@ nav.nav-desktop {
         color: #fff;
         font-size: 1.4rem;
         margin-left: 3rem;
+        transition: .5ms all ease-in-out;
+
+        &:hover {
+            color: yellowgreen;
+        }
     }
 }
 

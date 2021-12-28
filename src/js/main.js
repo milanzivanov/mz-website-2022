@@ -80,9 +80,20 @@ $(".slick-slider").slick({
   autoplay: true,
   autoplaySpeed: 10000,
   cssEase: "ease-out",
+  asNavFor: '.slider-nav',
   prevArrow: $(".left-nav-custom"),
-  nextArrow: $(".right-nav-custom")
+  nextArrow: $(".right-nav-custom"),
   // appendDots: $(".my-pagination")
+});
+
+$('.slider-nav').slick({
+  arrows: false,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slick-slider',
+  dots: false,
+  centerMode: true,
+  focusOnSelect: true
 });
 
 // particlesjs

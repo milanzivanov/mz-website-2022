@@ -295,12 +295,19 @@ span.about__experience--title {
     flex-direction: column;
 
     p {
-        padding: .5rem;
+        padding: 1rem;
+        box-shadow: 1px 1px 1px #d6e2ed;
+        background-color: aliceblue
     }
 
     @include breakpoint(desktop) {
         flex-direction: row;
     }
+}
+
+.slider-flex--bg {
+    padding: 1.5rem;
+    cursor: pointer;
 }
 
 // projects
