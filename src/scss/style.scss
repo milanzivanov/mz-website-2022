@@ -4,6 +4,7 @@
 @import "icons";
 @import "fonts";
 @import "global";
+@import "./sliders";
 @import "header";
 @import "footer";
 
@@ -175,6 +176,11 @@ main.container {
     bottom: 0;
 }
 
+img.about-container__box--img {
+    aspect-ratio: 1 / 0.75;
+    object-fit: cover;
+}
+
 .about-container__text {
     position: relative;
     z-index: 5;
@@ -254,60 +260,6 @@ span.about__experience--title {
     @include breakpoint(desktop) {
         left: 5rem;
     }
-}
-
-// slick slider
-.experience__slider {
-    position: relative;
-}
-
-.arrow-slider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.arrow-slider__left,
-.arrow-slider__right {
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #d2d8dd;
-}
-
-.arrow-slider__left {
-    z-index: 20;
-    position: absolute;
-    left: 0;
-}
-
-.arrow-slider__right {
-    position: absolute;
-    right: 0;
-    z-index: 20;
-}
-
-.slider-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    flex-direction: column;
-
-    p {
-        padding: 1rem;
-        box-shadow: 1px 1px 1px #d6e2ed;
-        background-color: aliceblue
-    }
-
-    @include breakpoint(desktop) {
-        flex-direction: row;
-    }
-}
-
-.slider-flex--bg {
-    padding: 1.5rem;
-    cursor: pointer;
 }
 
 // projects

@@ -93,7 +93,8 @@ $('.slider-nav').slick({
   asNavFor: '.slick-slider',
   dots: false,
   centerMode: true,
-  focusOnSelect: true
+  focusOnSelect: true,
+  centerPadding: true
 });
 
 // particlesjs

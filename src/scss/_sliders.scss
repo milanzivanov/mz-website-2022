@@ -1,0 +1,76 @@
+// slick slider
+.experience__slider {
+    position: relative;
+}
+
+.arrow-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow-slider__left,
+.arrow-slider__right {
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #d2d8dd;
+}
+
+.arrow-slider__left {
+    z-index: 20;
+    position: absolute;
+    left: 0;
+}
+
+.arrow-slider__right {
+    position: absolute;
+    right: 0;
+    z-index: 20;
+}
+
+.slider-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-direction: column;
+
+    @include breakpoint(desktop) {
+        flex-direction: row;
+    }
+}
+
+
+.slider-flex__text {
+    flex-direction: column;
+    padding: 0.5rem;
+
+    h3 {
+        text-transform: uppercase;
+        color: #23a6d5;
+        padding: 0  0 .5rem 0;
+    }
+
+    p {
+        padding: 1rem;
+        box-shadow: 1px 1px 1px #d6e2ed;
+        background-color: aliceblue
+    }
+        
+}
+
+.slider-nav {
+    display: none;
+}
+
+@include breakpoint(desktop) {
+    .slider-nav {
+        display: block;
+    }
+}
+
+.slider-flex--bg {
+    padding: 1rem;
+    cursor: pointer;
+}
