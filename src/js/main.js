@@ -72,6 +72,11 @@ jQuery(function () {
 
 });
 
+// https://simpleparallax.com/
+var image = document.querySelectorAll('.about-container__box--img');
+// var image2 = document.querySelector('main.container');
+new simpleParallax(image, {});
+
 // Slick
 $(".slick-slider").slick({
   slidesToShow: 1,
@@ -204,9 +209,6 @@ async function fetchUsers() {
               <div class="text-container">
                   <h2 class="text-container--title">${work.title}</h2>
                   <p class="text-container--description">${work.body}</p>
-
-                  <ul class="usedTechologies">
-                  </ul>
 
                   <a 
                       class="test-popup-link btn btn--med btn--theme" 
