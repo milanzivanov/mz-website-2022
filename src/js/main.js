@@ -73,8 +73,7 @@ jQuery(function () {
 });
 
 // https://simpleparallax.com/
-var image = document.querySelectorAll('.about-container__box--img');
-// var image2 = document.querySelector('main.container');
+const image = document.querySelectorAll('.about-container__box--img');
 new simpleParallax(image, {});
 
 // Slick
@@ -191,19 +190,17 @@ async function fetchUsers() {
 
   for (let work of works) {
 
-    // array in array
-    // const technologiesUsed = work.technologiesUsed;
-    // // console.log(technologiesUsed);
-    // for (let technology of technologiesUsed) {
-
-    // }
-
     output += `
     
 
       <div class="projects__row projects__row--reverse">
           <div class="projects__row--img">
-              <img src="${work.src}" alt="${work.author}" />
+              <a 
+                  href="${work.linkSrc}"
+                  class="magnific-popup-link" 
+                  target="_blank">
+                      <img src="${work.src}" alt="${work.author}" />
+              </a>
           </div>
           <div class="projects__row--text">
               <div class="text-container">

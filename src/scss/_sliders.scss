@@ -1,5 +1,5 @@
 // slick slider
-.experience__slider {
+.experience-slider__top {
     position: relative;
 }
 
@@ -33,7 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 0 2rem 1rem 2rem;
     flex-direction: column;
 
     @include breakpoint(desktop) {
