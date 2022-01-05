@@ -2,6 +2,13 @@
 .experience-slider__top {
     position: relative;
 }
+.experience-slider__bottom {
+    display: none;
+
+    @include breakpoint(large-desktop) {
+        display: block;
+    }
+}
 
 .arrow-slider {
     display: flex;
@@ -45,6 +52,15 @@
 .slider-flex__text {
     flex-direction: column;
     padding: 0.5rem;
+    background-color: #bdc2c7;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(desktop) {
+        background-color: #fff;
+        height: auto;
+    }
 
     h3 {
         text-transform: uppercase;
@@ -55,19 +71,13 @@
     p {
         padding: 1rem;
         box-shadow: 1px 1px 1px #d6e2ed;
-        background-color: aliceblue
+        background-color: aliceblue;
+
+        @include breakpoint(desktop) {
+            font-size: 1rem;
+        }
     }
         
-}
-
-.slider-nav {
-    display: none;
-}
-
-@include breakpoint(desktop) {
-    .slider-nav {
-        display: block;
-    }
 }
 
 .slider-flex--bg {

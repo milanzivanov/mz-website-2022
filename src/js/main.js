@@ -86,8 +86,7 @@ $(".slick-slider").slick({
   cssEase: "ease-out",
   asNavFor: '.slider-nav',
   prevArrow: $(".left-nav-custom"),
-  nextArrow: $(".right-nav-custom"),
-  // appendDots: $(".my-pagination")
+  nextArrow: $(".right-nav-custom")
 });
 
 $('.slider-nav').slick({
@@ -97,8 +96,7 @@ $('.slider-nav').slick({
   asNavFor: '.slick-slider',
   dots: false,
   centerMode: true,
-  focusOnSelect: true,
-  centerPadding: true
+  focusOnSelect: true
 });
 
 // particlesjs
