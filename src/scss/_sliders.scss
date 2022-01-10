@@ -66,6 +66,11 @@
         text-transform: uppercase;
         color: #23a6d5;
         padding: 0  0 .5rem 0;
+        text-align: center;
+
+        @include breakpoint(desktop) {
+            text-align: left;
+        }
     }
 
     p {
