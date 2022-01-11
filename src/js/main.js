@@ -72,9 +72,10 @@ jQuery(function () {
 
 });
 
+// simpleparallax
 // https://simpleparallax.com/
-const image = document.querySelectorAll('.about-container__box--img');
-new simpleParallax(image, {});
+// const image = document.querySelectorAll('.about-container__box--img');
+// new simpleParallax(image, {});
 
 // Slick
 $(".slick-slider").slick({
@@ -177,7 +178,6 @@ async function fetchUsers() {
   const res = await fetch(requestURL);
   const data = await res.json();
   let works = data.works;
-  // console.log(works);
 
   let myH2 = document.createElement("h2");
   myH2.classList.add("projects-title");
@@ -206,7 +206,7 @@ async function fetchUsers() {
                   <p class="text-container--description">${work.body}</p>
 
                   <a 
-                      class="test-popup-link btn btn--med btn--theme" 
+                      class="popup-link btn btn--size btn--theme" 
                       href="${work.linkSrc}"
                       target="_blank">
                       Case Study

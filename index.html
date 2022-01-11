@@ -1,408 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>milan zivanov | Front-end Developer</title>
-    <link rel="shortcut icon" type="image/ico" href="./favicon2022.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">     
-    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
+    <link rel="shortcut icon" type="image/ico" href="./favicon2022.ico" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link 
+        rel="preconnect" 
+        href="https://fonts.gstatic.com" 
+        crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@200;300;500;600;800&display=swap" 
+        rel="stylesheet"
+        crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./node_modules/magnific-popup/dist/magnific-popup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/slick-carousel/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/slick-carousel/slick/slick-theme.css"
+    />
 
-    <link rel="stylesheet" href="./dist/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <script defer src="./node_modules/jquery/dist/jquery.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <link
+      rel="stylesheet"
+      href="./node_modules/magnific-popup/dist/magnific-popup.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+      integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link 
+        rel="stylesheet" 
+        href="./dist/style.css" 
+        crossorigin="anonymous" />
+
+    <script
+        rel="preload"
+        as="script"
+        defer 
+        src="./node_modules/jquery/dist/jquery.js"
+        crossorigin="anonymous">
+    </script>
+    <script
+        rel="preload"
+        as="script"
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        referrerpolicy="no-referrer">
+    </script>
 
     <script defer src="./node_modules/slick-carousel/slick/slick.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-    <script defer src="./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      defer
+      src="./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js"
+    ></script>
+    <script
+      defer
+      rel="preload"
+      as="script"
+      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script defer src="./node_modules/particles.js/particles.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      defer
+      rel="preload"
+      as="script"
+      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-    <script defer src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script
+        defer
+        rel="preload"
+        as="script"
+        src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"
+        crossorigin="anonymous">
+    </script>
 
     <script defer src="./dist/main.js"></script>
 
-    <meta 
-        name="description" 
-        content="Milan Zivanov - Frontend Developer - This is my personal web-site and work portfolio that I did in the past. Check it and hire my frontend skills!">
-
-</head>
-<body>
-
+    <meta
+      name="description"
+      content="Milan Zivanov - Frontend Developer - This is my personal web-site and work portfolio that I did in the past. Check it and hire my frontend skills!"
+    />
+  </head>
+  <body>
     <main class="container" id="sectionHome">
+      <div id="particles-js"></div>
 
-        <div id="particles-js"></div>
+      <header class="header">
+        <div class="wrapper-inner header__content">
+          <div class="header__logo">
+            <a href="./index.html">
+              <img
+                src="./src/img/new-logo-2021.svg"
+                alt="desktop main logo milan zivanov"
+              />
+            </a>
+          </div>
 
-        <header class="header">
-            <div class="wrapper-inner header__content">
-                <div class="header__logo">
-                    <a href="./index.html">
-                        <img 
-                            src="./src/img/new-logo-2021.svg"
-                            alt="desktop main logo milan zivanov">
-                    </a>
-                </div>
+          <!-- desktop menu -->
+          <nav class="nav-desktop">
+            <ul class="nav-desktop__list">
+              <li class="nav-desktop__item">
+                <a class="nav-desktop__link" href="#sectionHome">Home</a>
+              </li>
+              <li class="nav-desktop__item">
+                <a class="nav-desktop__link" href="#sectionAbout">About</a>
+              </li>
+              <li class="nav-desktop__item">
+                <a class="nav-desktop__link" href="#sectionProjects"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="nav-desktop__item">
+                <a class="nav-desktop__link" href="#sectionContact">Contact</a>
+              </li>
+            </ul>
+          </nav>
 
-                <!-- desktop menu -->
-                <nav class="nav-desktop">
-                    <ul class="nav-desktop__list">
-                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionHome">Home</a></li>
-                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionAbout">About</a></li>
-                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionProjects">Portfolio</a></li>
-                        <li class="nav-desktop__item"><a class="nav-desktop__link" href="#sectionContact">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <!-- hamburger mobile menu -->
-                <div class="header__btn">
-                    <button 
-                        class="nav-toggle-btn" 
-                        type="button" 
-                        aria-label="toggle menu">
-                        <span aria-hidden="true">
-                        </span>
-                    </button>
-                </div>
-                
-            </div>
-        </header>
-
-        <div class="hero-content">
-                <div class="hero-content__text">
-                    <h1 class="hero-content__title hero__title--primary">
-                        I'm <span>Milan.</span>
-                    </h1>
-                    <h2 class="hero-content__title hero__title--secondery">
-                        <span>Frontend Developer.</span> 
-                    </h2>
-                </div>
+          <!-- hamburger mobile menu -->
+          <div class="header__btn">
+            <button
+                class="nav-toggle-btn"
+                type="button"
+                aria-label="toggle menu">
+                <span aria-hidden="true"></span>
+            </button>
+          </div>
         </div>
+      </header>
 
-        <!-- mobile navigation -->
-        <div class="nav-backdrop-container">
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="#sectionHome">Home</a></li>
-                    <li><a href="#sectionAbout">About</a></li>
-                    <li><a href="#sectionProjects">Portfolio</a></li>
-                    <li><a href="#sectionContact">Contact</a></li>
-                </ul>
-            </nav>
+      <div class="hero-content">
+        <div class="hero-content__text">
+          <h1 class="hero-content__title hero__title--primary">
+            I'm <span>Milan.</span>
+          </h1>
+          <h2 class="hero-content__title hero__title--secondery">
+            <span>Frontend Developer.</span>
+          </h2>
         </div>
+      </div>
 
-        <canvas class="bg-particles"></canvas>
+      <!-- mobile navigation -->
+      <div class="nav-backdrop-container">
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="#sectionHome">Home</a></li>
+            <li><a href="#sectionAbout">About</a></li>
+            <li><a href="#sectionProjects">Portfolio</a></li>
+            <li><a href="#sectionContact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <canvas class="bg-particles"></canvas>
     </main>
 
     <!-- about me -->
     <section class="about" id="sectionAbout">
-        <div class="wrapper-inner about-container">
-            <div class="about-container__box about-container__box--backdrop">
-                <h3 class="about__title">
-                    About me
-                </h3>
-                <img 
-                    class="about-container__box--img" 
-                    src="https://ik.imagekit.io/milanz/milanzivanov_com/computer-keybord_c1IosWxpM.jpg?tr:856,h-533" 
-                    alt="about image left">
-            </div>
-            <div class="about-container__box">
-                <div class="about-container__text about-container__text--top">
-                    <p class="about-container__paragraph about-container__paragraph--border-bottom">
-                        Hello, my name is <strong>Milan Živanov</strong> and I graduated in <strong>Higher Education Technical School of Professional Studies of Novi Sad(Serbia)</strong> with a Bachelor of Graphic Engineering and Design.
-                        I've been in the printing business for a long time and I mastered the knowledge of prepress and CTP work on printers.
-                    </p>
-                    <p class="about-container__paragraph">
-                        Over time I have developed an interest in web development , so I educated myself in <strong>HTML5/CSS3, JS, jQuery, Git, SCSS, RWD, Bootstrap, Gulp, Ts, Flexbox, Css Grid... which led me to more advanced technology</strong>. I am particularly interested in Frontend.
-                    </p>
-                </div>
-            </div>
+      <div class="wrapper-inner about-container">
+        <div class="about-container__box about-container__box--backdrop">
+          <h3 class="about__title">About me</h3>
+          <img
+            class="about-container__box--img"
+            src="./src/img/half-me-right-side.png"
+            alt="about image left"
+          />
         </div>
+        <div class="about-container__box">
+          <div class="about-container__text about-container__text--top">
+            <p
+              class="about-container__paragraph about-container__paragraph--border-bottom"
+            >
+              Hello, my name is <strong>Milan Živanov</strong> and I graduated
+              in
+              <strong
+                >Higher Education Technical School of Professional Studies of
+                Novi Sad(Serbia)</strong
+              >
+              with a Bachelor of Graphic Engineering and Design. I've been in
+              the printing business for a long time and I mastered the knowledge
+              of prepress and CTP work on printers.
+            </p>
+            <p class="about-container__paragraph">
+              Over time I have developed an interest in web development , so I
+              educated myself in
+              <strong
+                >HTML5/CSS3, JS, jQuery, Git, SCSS, RWD, Bootstrap, Gulp, Ts,
+                Flexbox, Css Grid... which led me to more advanced
+                technology</strong
+              >. I am particularly interested in Frontend.
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <div class="wrapper-inner about-container about-container--reverse">
-            <div class="about-container__box about-container__box--backdrop">
-                <h3 class="about__title about__title--right">
-                    Work experience
-                </h3>
-                <img 
-                    class="about-container__box--img" 
-                    src="https://ik.imagekit.io/milanz/milanzivanov_com/laptop-black_01K2ASVAG.jpg?tr:856,h-570" 
-                    alt="about image right">
-            </div>
-            <div class="about-container__box about-container__box--right">
-                <div class="about-container__text about-container__text--bottom">
+      <div class="wrapper-inner about-container about-container--reverse">
+        <div class="about-container__box about-container__box--backdrop">
+          <h3 class="about__title about__title--right">Work experience</h3>
+          <img
+            class="about-container__box--img"
+            src="./src/img/half-me-left-side.png"
+            alt="about image right"
+          />
+        </div>
+        <div class="about-container__box about-container__box--right">
+          <div class="about-container__text about-container__text--bottom">
+            <div class="experience-slider">
+              <div class="experience-slider__top">
+                <div class="arrow-slider__left">
+                  <div class="arrow-slider left-nav-custom">
+                    <svg
+                      class="icon-arrow w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
 
-                    <div class="experience-slider">
+                <div class="arrow-slider__right">
+                  <div class="arrow-slider right-nav-custom">
+                    <svg
+                      class="icon-arrow w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
 
-                        <div class="experience-slider__top">
-                            <div class="arrow-slider__left">
-                                <div class="arrow-slider left-nav-custom">
-                                    <svg class="icon-arrow w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                                </div>
-                            </div>
-    
-                            <div class="arrow-slider__right">
-                                <div class=" arrow-slider right-nav-custom">
-                                    <svg class="icon-arrow w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                                </div>
-                            </div>
-    
-                            <div class="slick-slider">
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex">
-                                        <div class="slider-flex__text">
-                                            <h3>Htec Group</h3>
-                                            <p>
-                                                At <strong>HTEC</strong> I worked on Verso enterprise aplication. I was fixing bugs, inserting new pages <strong>(html5, css3, angular-material)</strong>, and also spent some time working on angularjs.                               
-                                            </p>                               
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex">
-                                        <div class="slider-flex__text">
-                                            <h3>Oma Adriatic</h3>
-                                            <p>
-                                                My task was to redesign and semanticaly edit the following company websites: Lilly Intranet, Oma Adriatic Site, Gomex Partnerski B2B, Gomex Loyalty B2B. Other work included some graphic design(creation of Omega cards).                                
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex">
-                                        <div class="slider-flex__text">
-                                            <h3>Vega It Sourcing</h3>
-                                            <p>
-                                                I did an internship at <strong>Vega It Sourcing</strong> over the course of 3 weeks. Tasks included transferring Photoshop templates in <strong>html5, css3, jQuery, Responsive, pixel perfect</strong>.                              
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex">
-                                        <div class="slider-flex__text">
-                                            <h3>Htec Group</h3>
-                                            <p>
-                                                At <strong>HTEC</strong> I worked on Verso enterprise aplication. I was fixing bugs, inserting new pages<strong>(html5, css3, angular-material)</strong>, and also spent some time working on angularjs..                                
-                                            </p>                               
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex">
-                                        <div class="slider-flex__text">
-                                            <h3>Oma Adriatic</h3>
-                                            <p>
-                                                My task was to redesign and semanticaly edit the following company websites: Lilly Intranet, Oma Adriatic Site, Gomex Partnerski B2B, Gomex Loyalty B2B. Other work included some graphic design(creation of Omega cards).                               
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex">
-                                        <div class="slider-flex__text">
-                                            <h3>Vega It Sourcing</h3>
-                                            <p>
-                                                I did an internship at <strong>Vega It Sourcing</strong> over the course of 3 weeks. Tasks included transferring Photoshop templates in <strong>html5, css3, jQuery, Responsive, pixel perfect</strong>.                              
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-            
-                            </div>
-
-                        </div>
-
-                        <div class="experience-slider__bottom">
-                            <div class="slider-nav">
-    
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex slider-flex--bg">
-                                        <img 
-                                            src="https://ik.imagekit.io/milanz/milanzivanov_com/htec-logo_tZqCZq2M8.png?tr=w-150,h-100" 
-                                            alt="Htec Group Logo"> 
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex slider-flex--bg">
-                                        <img 
-                                            src="https://ik.imagekit.io/milanz/milanzivanov_com/oma-adriatic_WCqN77dzImJ.png?tr=w-100,h-100" 
-                                            alt="Oma Adriatic Logo">
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex slider-flex--bg">
-                                        <img 
-                                            src="https://ik.imagekit.io/milanz/milanzivanov_com/vegait_CB_Hj3pT-G.webp?tr=w-150,h-110" 
-                                            alt="Vega It Sourcing Logo">
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex slider-flex--bg">
-                                        <img 
-                                            src="https://ik.imagekit.io/milanz/milanzivanov_com/htec-logo_tZqCZq2M8.png?tr=w-150,h-100" 
-                                            alt="Htec Group Logo"> 
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex slider-flex--bg">
-                                        <img 
-                                            src="https://ik.imagekit.io/milanz/milanzivanov_com/oma-adriatic_WCqN77dzImJ.png?tr=w-100,h-100" 
-                                            alt="Oma Adriatic Logo">
-                                    </div>
-                                </div>
-                                <div class="slick-slider__item">
-                                    <div class="slider-flex slider-flex--bg">
-                                        <img 
-                                        src="https://ik.imagekit.io/milanz/milanzivanov_com/vegait_CB_Hj3pT-G.webp?tr=w-150,h-110" 
-                                        alt="Vega It Sourcing Logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="slick-slider">
+                  <div class="slick-slider__item">
+                    <div class="slider-flex">
+                      <div class="slider-flex__text">
+                        <h3>Htec Group</h3>
+                        <p>
+                          At <strong>HTEC</strong> I worked on Verso enterprise
+                          aplication. I was fixing bugs, inserting new pages
+                          <strong>(html5, css3, angular-material)</strong>, and
+                          also spent some time working on angularjs.
+                        </p>
+                      </div>
                     </div>
-
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex">
+                      <div class="slider-flex__text">
+                        <h3>Oma Adriatic</h3>
+                        <p>
+                          My task was to redesign the
+                          company websites: Lilly Intranet, Gomex Partnerski B2B, Gomex Loyalty
+                          B2B. Other work included some graphic design.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex">
+                      <div class="slider-flex__text">
+                        <h3>Vega It Sourcing</h3>
+                        <p>
+                          I did an internship at
+                          <strong>Vega It Sourcing</strong> over the course of 3
+                          weeks. Tasks included transferring Photoshop templates
+                          in
+                          <strong
+                            >html5, css3, jQuery, Responsive, pixel
+                            perfect</strong
+                          >.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex">
+                      <div class="slider-flex__text">
+                        <h3>Htec Group</h3>
+                        <p>
+                          At <strong>HTEC</strong> I worked on Verso enterprise
+                          aplication. I was fixing bugs, inserting new
+                          pages<strong>(html5, css3, angular-material)</strong>,
+                          and also spent some time working on angularjs..
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex">
+                      <div class="slider-flex__text">
+                        <h3>Oma Adriatic</h3>
+                        <p>
+                            My task was to redesign the
+                            company websites: Lilly Intranet, Gomex Partnerski B2B, Gomex Loyalty
+                            B2B. Other work included some graphic design.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex">
+                      <div class="slider-flex__text">
+                        <h3>Vega It Sourcing</h3>
+                        <p>
+                          I did an internship at
+                          <strong>Vega It Sourcing</strong> over the course of 3
+                          weeks. Tasks included transferring Photoshop templates
+                          in
+                          <strong
+                            >html5, css3, jQuery, Responsive, pixel
+                            perfect</strong
+                          >.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              <div class="experience-slider__bottom">
+                <div class="slider-nav">
+                  <div class="slick-slider__item">
+                    <div class="slider-flex slider-flex--bg">
+                      <img
+                        src="https://ik.imagekit.io/milanz/milanzivanov_com/htec-logo_tZqCZq2M8.png?tr=w-150,h-100"
+                        alt="Htec Group Logo"
+                      />
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex slider-flex--bg">
+                      <img
+                        src="https://ik.imagekit.io/milanz/milanzivanov_com/oma-adriatic_WCqN77dzImJ.png?tr=w-100,h-100"
+                        alt="Oma Adriatic Logo"
+                      />
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex slider-flex--bg">
+                      <img
+                        src="https://ik.imagekit.io/milanz/milanzivanov_com/vegait_CB_Hj3pT-G.webp?tr=w-150,h-110"
+                        alt="Vega It Sourcing Logo"
+                      />
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex slider-flex--bg">
+                      <img
+                        src="https://ik.imagekit.io/milanz/milanzivanov_com/htec-logo_tZqCZq2M8.png?tr=w-150,h-100"
+                        alt="Htec Group Logo"
+                      />
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex slider-flex--bg">
+                      <img
+                        src="https://ik.imagekit.io/milanz/milanzivanov_com/oma-adriatic_WCqN77dzImJ.png?tr=w-100,h-100"
+                        alt="Oma Adriatic Logo"
+                      />
+                    </div>
+                  </div>
+                  <div class="slick-slider__item">
+                    <div class="slider-flex slider-flex--bg">
+                      <img
+                        src="https://ik.imagekit.io/milanz/milanzivanov_com/vegait_CB_Hj3pT-G.webp?tr=w-150,h-110"
+                        alt="Vega It Sourcing Logo"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- //////////////// -->
     <!-- projects portfolio -->
     <section class="projects" id="sectionProjects">
-        <div class="wrapper-inner">
+      <div class="wrapper-inner"></div>
+      <div class="wrapper-inner">
+        <div class="projects__content">
+          <!-- from github api -->
         </div>
-        <div class="wrapper-inner">
-            <div class="projects__content">
-                <!-- from github api -->
-            </div>
-        </div> 
+      </div>
     </section>
 
     <!-- //////////////// -->
     <!-- contact START-->
     <section class="contact" id="sectionContact">
-        <div class="wrapper-inner">
-            <h2 class="projects-title">
-                Get in touch with me
-            </h2>
+      <div class="wrapper-inner">
 
-            <div class="contact__form-container">
-                <form action="#" class="contact__form">
-                  <div class="contact__form-field">
-                    <label class="contact__form-label" for="name">Name</label>
-                    <input required="" placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name">
-                  </div>
-                  <div class="contact__form-field">
-                    <label class="contact__form-label" for="email">Email</label>
-                    <input required="" placeholder="Enter Your Email" type="text" class="contact__form-input" name="email" id="email">
-                  </div>
-                  <div class="contact__form-field">
-                    <label class="contact__form-label" for="message">Message</label>
-                    <textarea required="" cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message" spellcheck="false"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn--theme contact__btn btn--med">
-                    Submit
-                  </button>
-                </form>
-              </div>
+        <h2 class="projects-title">Get in touch with me</h2>
+
+        <form 
+            class="contact__form-container contact__form" 
+            action="https://formspree.io/f/moqrvozd"
+            method="POST">
+
+            <label 
+                for="email-form"
+                class="contact__form-label">
+                Email
+            </label>
+            <input
+                class="contact__form-input"
+                type="email"
+                name="_replyto"
+                placeholder="Your email *"
+                id="email-form"
+                reset
+                required />
+
+            <label
+                for="message-form"
+                class="contact__form-label">
+                Message
+            </label>
+            <textarea
+                class="contact__form-input contact__form-input--space"
+                cols="30"
+                rows="10"
+                name="message"
+                id="message-form"
+                required>
+            </textarea>
+            
+            <!-- <button 
+                class="btn btn--theme contact__btn btn--med"
+                type="reset"> 
+                reset
+            </button> -->
+
+            <button 
+                class="btn btn--theme contact__btn btn--size"
+                type="submit"> 
+                send
+            </button>
+        </form>
         </div>
+      </div>
     </section>
 
     <!-- //////////////// -->
     <!-- footer START -->
     <footer class="footer-box">
-        <div class="wrapper-inner footer-box__container">
-            <div class="footer-box__top">
-                <div class="footer-box__item footer-box__item--left">
-                    <h3 class="footer-box__title">&nbsp;</h3>
-                    <div class="footer-box__description">
-                        <a 
-                            class="footer-box__img" 
-                            href="!javascript;" 
-                            target="_blank" 
-                            rel="noopener noreferrer">
-                            <img 
-                                src="./src/img/logo-hire-m-2021.svg" 
-                                alt="footer logo">
-                        </a>   
-                        <p>
-                            In life you need to be consistent in everything that you want to accomplish & because that challenge yourself. The magic is all around you! Experiment.                          
-                        </p>    
-                    </div>
-                </div>
-                <div class="footer-box__item footer-box__item--right">
-                    <h3 class="footer-box__title">Social links</h3>
-                    <ul class="footer-nav">
-                        <li class="footer-nav__item">
-                            <a 
-                                class="footer-nav__link"
-                                href="https://github.com/milanzivanov" 
-                                target="_blank">
-                                
-                                <svg class="icon icon-instagram">
-                                    <use xlink:href="./src/img/symbol-defs.svg#icon-github"></use>
-                                </svg>
-                                <span class="name">Github</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                                class="footer-nav__link"
-                                href="https://www.linkedin.com/in/milan-%C5%BEivanov1983/" 
-                                target="_blank">
-                                
-                                <svg class="icon icon-linkedin">
-                                    <use xlink:href="./src/img/symbol-defs.svg#icon-linkedin"></use>
-                                </svg>
-                                <span class="name">Linkedin</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                                class="footer-nav__link"
-                                href="https://www.instagram.com/half_milan_half_mile/" 
-                                target="_blank">
-                                
-                                <svg class="icon icon-instagram">
-                                    <use xlink:href="./src/img/symbol-defs.svg#icon-instagram"></use>
-                                </svg>
-                                <span class="name">Instagram</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
+      <div class="wrapper-inner footer-box__container">
+        <div class="footer-box__top">
+          <div class="footer-box__item footer-box__item--left">
+            <h3 class="footer-box__title">&nbsp;</h3>
+            <div class="footer-box__description">
+              <a
+                class="footer-box__img"
+                href="!javascript;"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="./src/img/logo-hire-m-2021.svg" alt="footer logo" />
+              </a>
+              <p>
+                In life you need to be consistent in everything that you want to
+                accomplish & because that challenge yourself. The magic is all
+                around you! Experiment.
+              </p>
             </div>
-            <div class="footer-box__bottom">
-                <small>
-                    <span>© 2021 - Developed and Designed with &#128578; by <strong>milan.zivanov@gmail.com</strong></span>
-                </small>
-            </div>
+          </div>
+          <div class="footer-box__item footer-box__item--right">
+            <h3 class="footer-box__title">Social links</h3>
+            <ul class="footer-nav">
+              <li class="footer-nav__item">
+                <a
+                  class="footer-nav__link"
+                  href="https://github.com/milanzivanov"
+                  target="_blank"
+                >
+                  <svg class="icon icon-instagram">
+                    <use
+                      xlink:href="./src/img/symbol-defs.svg#icon-github"
+                    ></use>
+                  </svg>
+                  <span class="name">Github</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="footer-nav__link"
+                  href="https://www.linkedin.com/in/milan-%C5%BEivanov1983/"
+                  target="_blank"
+                >
+                  <svg class="icon icon-linkedin">
+                    <use
+                      xlink:href="./src/img/symbol-defs.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+                  <span class="name">Linkedin</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="footer-nav__link"
+                  href="https://www.instagram.com/half_milan_half_mile/"
+                  target="_blank"
+                >
+                  <svg class="icon icon-instagram">
+                    <use
+                      xlink:href="./src/img/symbol-defs.svg#icon-instagram"
+                    ></use>
+                  </svg>
+                  <span class="name">Instagram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-box__bottom">
+          <small>
+            <span
+              >© 2021 - Developed and Designed with &#128578; by
+              <strong>milan.zivanov@gmail.com</strong></span
+            >
+          </small>
+        </div>
+      </div>
     </footer>
 
     <div class="back-to-top-container">
-        <div class="back-to-top show">
-            <a href="#sectionHeader" class="btn-to-top">
-                <img src="./src/img/logo-rocket-no-fire-2021.svg" alt="logo m rocket">
-            </a>
-            <a href="#sectionHeader" class="show-fire">                
-                <img src="./src/img/logo-rocket-fire-2021.svg" alt="logo m with fire rocket">
-            </a>
-        </div>
+      <div class="back-to-top show">
+        <a href="#sectionHeader" class="btn-to-top">
+          <img
+            src="./src/img/logo-rocket-no-fire-2021.svg"
+            alt="logo m rocket"
+          />
+        </a>
+        <a href="#sectionHeader" class="show-fire">
+          <img
+            src="./src/img/logo-rocket-fire-2021.svg"
+            alt="logo m with fire rocket"
+          />
+        </a>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>

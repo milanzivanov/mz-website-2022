@@ -23,6 +23,7 @@
     }
 }
 
+// nav desktop
 nav.nav-desktop {
     display: none;
 }
@@ -43,6 +44,7 @@ nav.nav-desktop {
         font-size: 1.4rem;
         margin-left: 3rem;
         transition: .5ms all ease-in-out;
+        font-family: $secondery_font_family;
 
         &:hover {
             color: #03a9f4;
@@ -146,7 +148,7 @@ nav.nav-desktop {
 		}
 	}
 
-// navigation
+// beckdrop
 .nav-backdrop-container {
     position: fixed;
     background-color: rgb(27 27 28 / 70%);
@@ -164,6 +166,7 @@ nav.nav-desktop {
     transform: translate(0, 0);
 }
 
+// nav mobile
 nav.nav {
     background: 
     linear-gradient(

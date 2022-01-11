@@ -1,7 +1,7 @@
 @import "mixins";
-@import "colors";
+@import "colors-variables";
 @import "typography";
-@import "icons";
+@import "icons-buttons";
 @import "fonts";
 @import "global";
 @import "./sliders";
@@ -13,7 +13,9 @@ html {
 }
 
 body {
-    font-family: "Roboto" sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
+    // font-family: 'Raleway', sans-serif;
 }
 
 main.container {
@@ -24,8 +26,14 @@ main.container {
     background: 
         linear-gradient(90deg,rgba(2,2,2,.8), #000),
         url(../src/img/common-bg.svg);
-
-    background-size: 400% 400%;
+        
+        background-size: 400% 400%;
+    
+    // bg version 2.0 
+    // background: 
+    //     linear-gradient(90deg,rgba(2,2,2,.8), #000),
+    //     url("https://ik.imagekit.io/milanz/milanzivanov_com/computer-keybord_c1IosWxpM.jpg?updatedAt=1641324460421");
+    // background-size: 100% 100%;
 
     animation: gradient 15s ease infinite;
 
@@ -56,7 +64,7 @@ main.container {
     position: relative;
     padding: .5rem;
     width: 95%;
-    font-family: 'Roboto', sans-serif;
+    font-family: $primary_font_family;
     color: white;
     font-style: normal;
     text-align: left;
@@ -76,12 +84,13 @@ main.container {
 
 .hero-content__title {
     width: 100%;
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    font-weight: 700;
+    font-size: 3.1rem;
+    line-height: 3.2rem;
 
     @include breakpoint(desktop) {
-        font-size: 3.7rem;
-        line-height: 3.7rem;
+        font-size: 3.3rem;
+        line-height: 3.3rem;
     }
     
     @include breakpoint(large-desktop) {
@@ -126,7 +135,7 @@ main.container {
     align-items: center;
     position: relative;
     flex-wrap: wrap;
-    padding: 5rem 0;
+    padding: 2.5rem 0;
     background: 
         linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
         url(../src/img/common-bg.svg);
@@ -135,6 +144,9 @@ main.container {
 
     @include breakpoint(desktop) {
         flex-direction: row;
+    }
+    @include breakpoint(large-desktop) {
+        padding: 5rem 0;
     }
 
 }
@@ -201,17 +213,15 @@ img.about-container__box--img {
 
     @include breakpoint(desktop) {
         box-shadow: none;
+        font-size: 1rem;
+    }
+    @include breakpoint(large-desktop) {
         font-size: 1.125rem;
     }
 }
 
 .about-container__paragraph {
-    padding: 2rem 0;
-
-    @include breakpoint(desktop) {
-        font-size: 1rem;
-        padding: 1rem 0;
-    }
+    padding: 1rem 0;
 }
 
 .about-container__paragraph--border-bottom {
@@ -219,11 +229,12 @@ img.about-container__box--img {
 }
 
 .about__title {
-    width: 80%;
+    width: 75%;
     z-index: 5;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.3rem;
+    font-family: $primary_font_family;
+    font-size: 1.2rem;
     color: #23a6d5;
     padding: 1rem;
     position: absolute;
@@ -298,6 +309,7 @@ span.about__experience--title {
 h2.projects-title {
     padding: 2rem 0;
     text-align: center;
+    font-family: $primary_font_family;
     font-size: 1.7rem;
     color: #23a6d5;
     text-transform: uppercase;
@@ -306,7 +318,7 @@ h2.projects-title {
         font-size: 2rem;
     }
     @include breakpoint(large-desktop) {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -339,18 +351,6 @@ h2.projects-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    h2 {
-        font-size: 1.5rem;
-        color: #fff;
-        
-        @include breakpoint(desktop) {
-            font-size: 2rem;
-        }
-        @include breakpoint(large-desktop) {
-            font-size: 2.5rem;
-        }
-    }
 }
 
 .text-container {
@@ -360,10 +360,10 @@ h2.projects-title {
     background: 
         linear-gradient(90deg,rgba(2,2,2,.65), #000),
         url(../src/img/common-bg.svg);
-        background-size: 400% 400%;
+        background-size: 100% 100%;
 
     padding: 2rem;
-    align-items: flex-start;
+    align-items: flex-end;
     // if background is white than I gonna use box-shadow
     // box-shadow: 1px 1px 1px #d6e2ed;
     // border-radius: 5px;
@@ -371,45 +371,26 @@ h2.projects-title {
 }
 
 .text-container--title {
-    color: #23a6d5;
-    font-size: 2.5rem;
+    font-family: $primary_font_family;
+    color: #fff;
+    font-size: 1.7rem;
     padding-bottom: 1rem;
+    align-self: flex-start;
+
+    @include breakpoint(desktop) {
+        font-size: 2rem;
+    }
+    @include breakpoint(large-desktop) {
+        font-size: 2.3rem;
+    }
 }
 
 .text-container--description {
     box-shadow: 1px 1px 1px #d6e2ed;
     margin-bottom: 3rem;
+    letter-spacing: .3px;
     padding: 0.5rem;
     background: #fff;
-}
-
-.btn {
-    text-decoration: none;
-    background: #fff;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: inline-block;
-    font-weight: 700;
-    // border-radius: 5px;
-    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
-    transition: transform .3s;
-    outline: none;
-    border: 0;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-.btn--theme {
-    background: #0071bc;
-    color: #fff;
-}
-
-.btn--med {
-    padding: .5rem 2rem;
-    font-size: 1rem;
 }
 
 // contact
@@ -421,6 +402,13 @@ section.contact {
         url(../src/img/common-bg.svg);
     background-size: cover;
     background-position: 50%;
+
+    @include breakpoint(desktop) {
+        padding: 0 0 2.5rem;
+    }
+    @include breakpoint(large-desktop) {
+        padding: 0 0 2rem;
+    }
 }
 
 .contact__form-container {
@@ -431,14 +419,6 @@ section.contact {
     text-align: right;
     border-radius: 5px;
     margin: 0 auto;
-
-    @include breakpoint(desktop) {
-        margin: 3rem auto 0;
-    } 
-}
-
-.contact__form-field {
-    margin-bottom: 4rem;
 }
 
 .contact__form-label {
@@ -446,7 +426,7 @@ section.contact {
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 700;
-    margin-bottom: 1rem;
+    padding: 1rem;
     display: block;
     text-align: left;
 }
@@ -461,6 +441,10 @@ section.contact {
     background: #f0f0f0;
     border-radius: 5px;
     font-weight: 600;
+}
+
+.contact__form-input--space {
+    margin: 0 0 2rem 0;
 }
 
 // BTT
