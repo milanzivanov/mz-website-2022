@@ -72,14 +72,6 @@ $(function() {
 
 });
 
-// simpleparallax
-// https://simpleparallax.com/
-// const image = document.querySelectorAll('.about-container__box--img');
-// new simpleParallax(image, {
-//   orientation: 'right',
-//   scale: "1.1"
-// });
-
 // Slick
 $(".slick-slider").slick({
   slidesToShow: 1,
@@ -200,7 +192,7 @@ async function fetchUsers() {
                   href="${work.linkSrc}"
                   class="magnific-popup-link" 
                   target="_blank">
-                      <img src="${work.src}" alt="${work.author}" />
+                      <img loading="lazy" src="${work.src}" alt="${work.author}" />
               </a>
           </div>
           <div class="projects__row--text">
