@@ -79,6 +79,7 @@ main.container {
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         width: 50%;
+        border-radius: 5px;
     }
 }
 
@@ -190,6 +191,7 @@ main.container {
 .about-container__box--backdrop::after {
     content: "";
     background-color: rgba(0,0,0,.2);
+    background-size: 100% 100%;
     position: absolute;
     z-index: 4;
     top: 0;
@@ -198,9 +200,26 @@ main.container {
     bottom: 0;
 }
 
+// .about-container__box--backdrop-left::after {
+//     background: 
+//         linear-gradient(-90deg,rgba(0,0,0,.1), #c4c9ce),
+//         url("https://ik.imagekit.io/milanz/milanzivanov_com/computer-keybord_sd_F-Qb62.webp");
+//         background-size: 100% 100%;
+
+// }
+// .about-container__box--backdrop-right::after {
+//     background: 
+//         linear-gradient(90deg,rgba(0,0,0,.1), #c4c9ce),
+//         url("https://ik.imagekit.io/milanz/milanzivanov_com/computer-keybord_sd_F-Qb62.webp");
+//         background-size: 100% 100%;
+// }
+
 img.about-container__box--img {
-    aspect-ratio: 1 / 0.75;
+    // aspect-ratio: 1 / 1;
+    aspect-ratio: attr(width) / attr(height);
     object-fit: cover;
+    z-index: 4;
+    position: relative;
 }
 
 .about-container__text {
@@ -254,6 +273,15 @@ img.about-container__box--img {
         font-size: 2rem;
         padding: 2rem;
     }
+}
+
+.about__title--right-radius {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.about__title--left-radius {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .about__title--right {
@@ -310,7 +338,7 @@ h2.projects-title {
     padding: 2rem 0;
     text-align: center;
     font-family: $primary_font_family;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #23a6d5;
     text-transform: uppercase;
 
@@ -366,7 +394,10 @@ h2.projects-title {
     align-items: flex-end;
     // if background is white than I gonna use box-shadow
     // box-shadow: 1px 1px 1px #d6e2ed;
-    // border-radius: 5px;
+
+    @include breakpoint(desktop) {
+        border-radius: 5px;
+    }
 
 }
 
@@ -391,6 +422,7 @@ h2.projects-title {
     letter-spacing: .3px;
     padding: 0.5rem;
     background: #fff;
+    border-radius: 5px;
 }
 
 // contact
@@ -463,6 +495,7 @@ section.contact {
     bottom: 0;
     margin: 5px;
     z-index: 20;
+    border-radius: 5px;
 }
 .back-to-top.show {
     display: flex;

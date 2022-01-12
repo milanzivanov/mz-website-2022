@@ -1,4 +1,4 @@
-jQuery(function () {
+$(function() {
   "use strict";
   // open mobile menu and hamburger btn
   $(".nav-toggle-btn").on("click", function (e) {
@@ -75,7 +75,10 @@ jQuery(function () {
 // simpleparallax
 // https://simpleparallax.com/
 // const image = document.querySelectorAll('.about-container__box--img');
-// new simpleParallax(image, {});
+// new simpleParallax(image, {
+//   orientation: 'right',
+//   scale: "1.1"
+// });
 
 // Slick
 $(".slick-slider").slick({

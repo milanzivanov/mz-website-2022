@@ -48,6 +48,7 @@ h3.footer-box__title {
     p {
         padding: 1rem;
         background-color: #1a1a1a;
+        border-radius: 5px;
     }
     
     @include breakpoint(desktop) {
