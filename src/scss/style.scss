@@ -1,6 +1,6 @@
 @import "mixins";
 @import "colors-variables";
-@import "typography";
+@import "typography-headings";
 @import "icons-buttons";
 @import "fonts";
 @import "global";
@@ -26,15 +26,8 @@ main.container {
     background: 
         linear-gradient(90deg,rgba(2,2,2,.8), #000),
         url(../src/img/common-bg.svg);
-        
         background-size: 400% 400%;
     
-    // bg version 2.0 
-    // background: 
-    //     linear-gradient(90deg,rgba(2,2,2,.8), #000),
-    //     url("https://ik.imagekit.io/milanz/milanzivanov_com/computer-keybord_c1IosWxpM.jpg?updatedAt=1641324460421");
-    // background-size: 100% 100%;
-
     animation: gradient 15s ease infinite;
 
     @include breakpoint(desktop) {
@@ -70,6 +63,7 @@ main.container {
     text-align: left;
     position: relative;
     z-index: 5;
+    border-radius: 5px;
 
     @include breakpoint(desktop) {
         background-color: rgb(6, 6, 6, .7);
@@ -79,7 +73,6 @@ main.container {
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
         width: 50%;
-        border-radius: 5px;
     }
 }
 
@@ -191,7 +184,6 @@ main.container {
 .about-container__box--backdrop::after {
     content: "";
     background-color: rgba(0,0,0,.2);
-    background-size: 100% 100%;
     position: absolute;
     z-index: 4;
     top: 0;
@@ -200,26 +192,9 @@ main.container {
     bottom: 0;
 }
 
-// .about-container__box--backdrop-left::after {
-//     background: 
-//         linear-gradient(-90deg,rgba(0,0,0,.1), #c4c9ce),
-//         url("https://ik.imagekit.io/milanz/milanzivanov_com/computer-keybord_sd_F-Qb62.webp");
-//         background-size: 100% 100%;
-
-// }
-// .about-container__box--backdrop-right::after {
-//     background: 
-//         linear-gradient(90deg,rgba(0,0,0,.1), #c4c9ce),
-//         url("https://ik.imagekit.io/milanz/milanzivanov_com/computer-keybord_sd_F-Qb62.webp");
-//         background-size: 100% 100%;
-// }
-
 img.about-container__box--img {
-    // aspect-ratio: 1 / 1;
-    aspect-ratio: attr(width) / attr(height);
+    aspect-ratio: 1 / 0.75;
     object-fit: cover;
-    z-index: 4;
-    position: relative;
 }
 
 .about-container__text {
@@ -229,6 +204,7 @@ img.about-container__box--img {
     padding: 1rem;
     box-shadow: 1px 1px 1px #d6e2ed;
     font-size: 1rem;
+    border-radius: 5px;
 
     @include breakpoint(desktop) {
         box-shadow: none;
@@ -247,17 +223,13 @@ img.about-container__box--img {
     border-bottom: 1px solid #d6e2ed;
 }
 
-.about__title {
+h2.about__title {
     width: 75%;
     z-index: 5;
-    text-transform: uppercase;
     text-align: center;
-    font-family: $primary_font_family;
-    font-size: 1.2rem;
-    color: #23a6d5;
     padding: 1rem;
     position: absolute;
-    left: 0;
+    // left: 0;
     transform: translateY(-50%);
     top: 50%;
     background-color: rgb(255 255 255 / 80%);
@@ -265,28 +237,23 @@ img.about-container__box--img {
 
     @include breakpoint(desktop) {
         width: 70%;
-        font-size: 1.5rem;
-        padding: 1rem;
     }
 
-    @include breakpoint(large-desktop) {
-        font-size: 2rem;
-        padding: 2rem;
-    }
+    // @include breakpoint(large-desktop) {
+    //     padding: 1.5rem;
+    // }
 }
 
-.about__title--right-radius {
+.about__title--left {
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
-}
-.about__title--left-radius {
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
 }
 
 .about__title--right {
     right: 0;
     left: auto;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .about__experience {
@@ -298,13 +265,14 @@ img.about-container__box--img {
     }
 }
 
-span.about__experience--title {
-    font-weight: 700;
-    text-transform: uppercase;
-    padding-bottom: 1.5rem;
-    display: inline-block;
-    color: #222;
-}
+// span.about__experience--title {
+//     font-weight: 700;
+//     text-transform: uppercase;
+//     padding-bottom: 1.5rem;
+//     display: inline-block;
+//     color: #222;
+//     border: 5px solid red;
+// }
 
 .about-container__text--top {
     right: 0;
@@ -332,22 +300,6 @@ span.about__experience--title {
 // projects
 .projects {
     background-color: #000;
-}
-
-h2.projects-title {
-    padding: 2rem 0;
-    text-align: center;
-    font-family: $primary_font_family;
-    font-size: 1.5rem;
-    color: #23a6d5;
-    text-transform: uppercase;
-
-    @include breakpoint(desktop) {
-        font-size: 2rem;
-    }
-    @include breakpoint(large-desktop) {
-        font-size: 2.3rem;
-    }
 }
 
 .projects__row {
@@ -394,26 +346,8 @@ h2.projects-title {
     align-items: flex-end;
     // if background is white than I gonna use box-shadow
     // box-shadow: 1px 1px 1px #d6e2ed;
+    // border-radius: 5px;
 
-    @include breakpoint(desktop) {
-        border-radius: 5px;
-    }
-
-}
-
-.text-container--title {
-    font-family: $primary_font_family;
-    color: #fff;
-    font-size: 1.7rem;
-    padding-bottom: 1rem;
-    align-self: flex-start;
-
-    @include breakpoint(desktop) {
-        font-size: 2rem;
-    }
-    @include breakpoint(large-desktop) {
-        font-size: 2.3rem;
-    }
 }
 
 .text-container--description {

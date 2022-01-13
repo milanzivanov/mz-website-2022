@@ -16,20 +16,20 @@
         crossorigin="anonymous">
 
     <link
-        rel="stylesheet"
-        href="./node_modules/slick-carousel/slick/slick.css"
+      rel="stylesheet"
+      href="./node_modules/slick-carousel/slick/slick.css"
     />
     <link
-        rel="stylesheet"
-        href="./node_modules/slick-carousel/slick/slick-theme.css"
+      rel="stylesheet"
+      href="./node_modules/slick-carousel/slick/slick-theme.css"
     />
 
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
-        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -40,41 +40,42 @@
     />
 
     <link
-        rel="stylesheet"
-        href="./node_modules/magnific-popup/dist/magnific-popup.css"
+      rel="stylesheet"
+      href="./node_modules/magnific-popup/dist/magnific-popup.css"
     />
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
-        integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"
+      integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <link 
-        rel="stylesheet"
-        as="style"  
+        rel="stylesheet" 
         href="./dist/style.css" 
         crossorigin="anonymous" />
 
-    <!-- scripts -->
     <script
         rel="preload"
+        as="script"
         defer 
         src="./node_modules/jquery/dist/jquery.js"
         crossorigin="anonymous">
     </script>
     <script
         rel="preload"
+        as="script"
         defer
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         referrerpolicy="no-referrer">
     </script>
 
     <script 
-        defer
+        defer 
         src="./node_modules/slick-carousel/slick/slick.js">
     </script>
+
     <script
         defer
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
@@ -88,32 +89,39 @@
         src="./node_modules/magnific-popup/dist/jquery.magnific-popup.min.js">
     </script>
     <script
-      defer
-      rel="preload"
-      src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
-      integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+        defer
+        rel="preload"
+        as="script"
+        src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+        integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+    </script>
 
     <script 
-        defer
+        defer 
         src="./node_modules/particles.js/particles.js">
     </script>
+
     <script
         defer
         rel="preload"
+        as="script"
         src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
         integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer">
     </script>
 
-    <script 
-        async 
+    <script
+        defer
+        rel="preload"
         as="script"
-        src="./dist/main.js">
+        src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"
+        crossorigin="anonymous">
     </script>
+
+    <script defer src="./dist/main.js"></script>
 
     <meta
       name="description"
@@ -196,21 +204,25 @@
     <!-- about me -->
     <section class="about" id="sectionAbout">
       <div class="wrapper-inner about-container">
-        <div class="about-container__box about-container__box--backdrop about-container__box--backdrop-right">
-          <h3 class="about__title about__title--right-radius">
+        <div class="about-container__box about-container__box--backdrop">
+          <h2 class="section-h2-title about__title about__title--left">
               About me
-          </h3>
-          <img
-            loading="lazy"
+          </h2>
+          <!-- <img
             class="about-container__box--img"
-            src="https://ik.imagekit.io/milanz/milanzivanov_com/half-me-right-side_eIudOlxPyL.webp"
+            src="https://ik.imagekit.io/milanz/milanzivanov_com/half-me-right-side_eIudOlxPyL.webp?tr=w-856,h-645"
+            alt="about image left"
+          /> -->
+          <img
+            class="about-container__box--img"
+            src="./src/img/new-me.jpg"
             alt="about image left"
           />
         </div>
         <div class="about-container__box">
           <div class="about-container__text about-container__text--top">
             <p
-              class="about-container__paragraph about-container__paragraph--border-bottom"
+              class="paragraph-primary-18 about-container__paragraph about-container__paragraph--border-bottom"
             >
               Hello, my name is <strong>Milan Živanov</strong> and I graduated
               in
@@ -222,7 +234,7 @@
               the printing business for a long time and I mastered the knowledge
               of prepress and CTP work on printers.
             </p>
-            <p class="about-container__paragraph">
+            <p class="paragraph-primary-18 about-container__paragraph">
               Over time I have developed an interest in web development , so I
               educated myself in
               <strong
@@ -236,16 +248,20 @@
       </div>
 
       <div class="wrapper-inner about-container about-container--reverse">
-        <div class="about-container__box about-container__box--backdrop about-container__box--backdrop-left">
-          <h3 class="about__title about__title--right about__title--left-radius">
+        <div class="about-container__box about-container__box--backdrop">
+          <h2 class="section-h2-title about__title about__title--right">
               Work experience
-          </h3>
+          </h2>
           <img
-            loading="lazy"
             class="about-container__box--img"
             src="https://ik.imagekit.io/milanz/milanzivanov_com/laptopOnTheTable_JMkxPdNex.webp?tr=w-856,h-645"
             alt="about image right"
           />
+          <!-- <img
+            class="about-container__box--img"
+            src="./src/img/exeperience.jpg"
+            alt="about image right"
+          /> -->
         </div>
         <div class="about-container__box about-container__box--right">
           <div class="about-container__text about-container__text--bottom">
@@ -293,8 +309,8 @@
                   <div class="slick-slider__item">
                     <div class="slider-flex">
                       <div class="slider-flex__text">
-                        <h3>Htec Group</h3>
-                        <p>
+                        <h3 class="section-h3-title">Htec Group</h3>
+                        <p class="paragraph-primary-18">
                           At <strong>HTEC</strong> I worked on Verso enterprise
                           aplication. I was fixing bugs, inserting new pages
                           <strong>(html5, css3, angular-material)</strong>, and
@@ -306,8 +322,10 @@
                   <div class="slick-slider__item">
                     <div class="slider-flex">
                       <div class="slider-flex__text">
-                        <h3>Oma Adriatic</h3>
-                        <p>
+                        <h3 class="section-h3-title">
+                            Oma Adriatic
+                        </h3>
+                        <p class="paragraph-primary-18">
                           My task was to redesign the
                           company websites: Lilly Intranet, Gomex Partnerski B2B, Gomex Loyalty
                           B2B. Other work included some graphic design.
@@ -318,8 +336,10 @@
                   <div class="slick-slider__item">
                     <div class="slider-flex">
                       <div class="slider-flex__text">
-                        <h3>Vega It Sourcing</h3>
-                        <p>
+                        <h3 class="section-h3-title">
+                            Vega It Sourcing
+                        </h3>
+                        <p class="paragraph-primary-18">
                           I did an internship at
                           <strong>Vega It Sourcing</strong> over the course of 3
                           weeks. Tasks included transferring Photoshop templates
@@ -335,8 +355,10 @@
                   <div class="slick-slider__item">
                     <div class="slider-flex">
                       <div class="slider-flex__text">
-                        <h3>Htec Group</h3>
-                        <p>
+                        <h3 class="section-h3-title">
+                            Htec Group
+                        </h3>
+                        <p class="paragraph-primary-18">
                           At <strong>HTEC</strong> I worked on Verso enterprise
                           aplication. I was fixing bugs, inserting new
                           pages<strong>(html5, css3, angular-material)</strong>,
@@ -348,8 +370,10 @@
                   <div class="slick-slider__item">
                     <div class="slider-flex">
                       <div class="slider-flex__text">
-                        <h3>Oma Adriatic</h3>
-                        <p>
+                        <h3 class="section-h3-title">
+                            Oma Adriatic
+                        </h3>
+                        <p class="paragraph-primary-18">
                             My task was to redesign the
                             company websites: Lilly Intranet, Gomex Partnerski B2B, Gomex Loyalty
                             B2B. Other work included some graphic design.
@@ -360,8 +384,10 @@
                   <div class="slick-slider__item">
                     <div class="slider-flex">
                       <div class="slider-flex__text">
-                        <h3>Vega It Sourcing</h3>
-                        <p>
+                        <h3 class="section-h3-title">
+                            Vega It Sourcing
+                        </h3>
+                        <p class="paragraph-primary-18">
                           I did an internship at
                           <strong>Vega It Sourcing</strong> over the course of 3
                           weeks. Tasks included transferring Photoshop templates
@@ -438,7 +464,11 @@
     <!-- //////////////// -->
     <!-- projects portfolio -->
     <section class="projects" id="sectionProjects">
-      <div class="wrapper-inner"></div>
+      <div class="wrapper-inner">
+        <h2 class="section-h2-title projects-title">
+            Web potrfolio
+        </h2>
+      </div>
       <div class="wrapper-inner">
         <div class="projects__content">
           <!-- from github api -->
@@ -451,7 +481,9 @@
     <section class="contact" id="sectionContact">
       <div class="wrapper-inner">
 
-        <h2 class="projects-title">Get in touch with me</h2>
+        <h2 class="section-h2-title projects-title">
+            Get in touch with me
+        </h2>
 
         <form 
             class="contact__form-container contact__form" 
@@ -518,7 +550,7 @@
               >
                 <img src="./src/img/logo-hire-m-2021.svg" alt="footer logo" />
               </a>
-              <p>
+              <p class="paragraph-primary-16">
                 In life you need to be consistent in everything that you want to
                 accomplish & because that challenge yourself. The magic is all
                 around you! Experiment.
@@ -526,7 +558,9 @@
             </div>
           </div>
           <div class="footer-box__item footer-box__item--right">
-            <h3 class="footer-box__title">Social links</h3>
+            <h3 class="section-h3-title footer-box__title">
+                Social links
+            </h3>
             <ul class="footer-nav">
               <li class="footer-nav__item">
                 <a

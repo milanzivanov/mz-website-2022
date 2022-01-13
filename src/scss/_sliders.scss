@@ -22,6 +22,7 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: #d2d8dd;
+    border-radius: 5px;
 }
 
 .arrow-slider__left {
@@ -56,7 +57,6 @@
     // height: 100vw;
     display: flex;
     justify-content: center;
-    border-radius: 5px;
 
     @include breakpoint(desktop) {
         background-color: #fff;
@@ -80,9 +80,9 @@
         background-color: aliceblue;
         border-radius: 5px;
 
-        @include breakpoint(desktop) {
-            font-size: 1rem;
-        }
+        // @include breakpoint(desktop) {
+        //     font-size: 1rem;
+        // }
     }
         
 }

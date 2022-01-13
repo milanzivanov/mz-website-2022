@@ -1,4 +1,4 @@
-$(function() {
+jQuery(function () {
   "use strict";
   // open mobile menu and hamburger btn
   $(".nav-toggle-btn").on("click", function (e) {
@@ -10,7 +10,7 @@ $(function() {
   });
 
   // Magnific popup
-  $(".test-popup-link").magnificPopup({
+  $(".magnific-popup-link").magnificPopup({
     type: "image",
     // other options
     gallery: {
@@ -71,6 +71,7 @@ $(function() {
   });
 
 });
+
 
 // Slick
 $(".slick-slider").slick({
@@ -167,17 +168,17 @@ particlesJS("particles-js", {
 // json file with my fe works
 let requestURL = "https://milanzivanov.github.io/Data/works.json";
 let section = document.querySelector(".projects__content");
-let titleName = document.querySelector(".projects .wrapper-inner");
+// let titleName = document.querySelector(".projects .wrapper-inner");
 
 async function fetchUsers() {
   const res = await fetch(requestURL);
   const data = await res.json();
   let works = data.works;
 
-  let myH2 = document.createElement("h2");
-  myH2.classList.add("projects-title");
-  myH2.textContent = data.titleName;
-  titleName.appendChild(myH2);
+  // let myH2 = document.createElement("h2");
+  // myH2.classList.add("projects-title");
+  // myH2.textContent = data.titleName;
+  // titleName.appendChild(myH2);
 
   output = "";
 
@@ -192,13 +193,13 @@ async function fetchUsers() {
                   href="${work.linkSrc}"
                   class="magnific-popup-link" 
                   target="_blank">
-                      <img loading="lazy" src="${work.src}" alt="${work.author}" />
+                      <img src="${work.src}" alt="${work.author}" />
               </a>
           </div>
           <div class="projects__row--text">
               <div class="text-container">
-                  <h2 class="text-container--title">${work.title}</h2>
-                  <p class="text-container--description">${work.body}</p>
+                  <h3 class="section-h3-title project-container--title">${work.title}</h3>
+                  <p class="paragraph-primary-16 text-container--description">${work.body}</p>
 
                   <a 
                       class="popup-link btn btn--size btn--theme" 
