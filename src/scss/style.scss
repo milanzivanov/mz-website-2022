@@ -121,6 +121,7 @@ main.container {
     z-index: 0;
 }
 
+//////////////////
 // about
 .about {
     display: flex;
@@ -130,14 +131,16 @@ main.container {
     position: relative;
     flex-wrap: wrap;
     padding: 2.5rem 0;
-    background: 
-        linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
-        url(../src/img/common-bg.svg);
+    background-color: #ccc;
+
     background-size: cover;
     background-position: 50%;
 
     @include breakpoint(desktop) {
         flex-direction: row;
+        background: 
+        linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
+        url(../src/img/common-bg.svg);
     }
     @include breakpoint(large-desktop) {
         padding: 5rem 0;
@@ -192,7 +195,7 @@ main.container {
     bottom: 0;
 }
 
-img.about-container__box--img {
+.about-container__box--img {
     aspect-ratio: 1 / 0.75;
     object-fit: cover;
 }
@@ -229,7 +232,6 @@ h2.about__title {
     text-align: center;
     padding: 1rem;
     position: absolute;
-    // left: 0;
     transform: translateY(-50%);
     top: 50%;
     background-color: rgb(255 255 255 / 80%);
@@ -239,9 +241,6 @@ h2.about__title {
         width: 70%;
     }
 
-    // @include breakpoint(large-desktop) {
-    //     padding: 1.5rem;
-    // }
 }
 
 .about__title--left {
@@ -264,15 +263,6 @@ h2.about__title {
         text-align: center;
     }
 }
-
-// span.about__experience--title {
-//     font-weight: 700;
-//     text-transform: uppercase;
-//     padding-bottom: 1.5rem;
-//     display: inline-block;
-//     color: #222;
-//     border: 5px solid red;
-// }
 
 .about-container__text--top {
     right: 0;
@@ -297,6 +287,7 @@ h2.about__title {
     }
 }
 
+//////////////////
 // projects
 .projects {
     background-color: #000;
@@ -305,10 +296,10 @@ h2.about__title {
 .projects__row {
     display: flex;
     grid-gap: 3rem;
-    margin-bottom: 5rem;
     flex-direction: column;
 
     @include breakpoint(desktop) {
+        padding-bottom: 5rem;
         flex-direction: row;
         grid-gap: 5rem;
     }
@@ -344,9 +335,8 @@ h2.about__title {
 
     padding: 2rem;
     align-items: flex-end;
-    // if background is white than I gonna use box-shadow
-    // box-shadow: 1px 1px 1px #d6e2ed;
-    // border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #222;
 
 }
 
@@ -359,6 +349,7 @@ h2.about__title {
     border-radius: 5px;
 }
 
+//////////////////////
 // contact
 section.contact {
     padding: 0 0 2rem;
@@ -413,6 +404,7 @@ section.contact {
     margin: 0 0 2rem 0;
 }
 
+////////////////////
 // BTT
 .back-to-top-container {
     width: 100%;
@@ -434,7 +426,6 @@ section.contact {
 .back-to-top.show {
     display: flex;
 }
-
 
 a.btn-to-top {
     height: 3.5rem;
@@ -462,6 +453,7 @@ a.show-fire.show {
     display: block;
 }
 
+///////////////////
 // @keyframes
 @keyframes gradient {
     0% {

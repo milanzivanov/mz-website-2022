@@ -1,38 +1,43 @@
 h2.section-h2-title {
-    // padding: 2rem 0;
+    padding: 2rem 0;
     text-align: center;
     text-transform: uppercase;
     font-family: $primary_font_family;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #23a6d5;
 
     @include breakpoint(desktop) {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
     @include breakpoint(large-desktop) {
         padding: 2rem;
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
 }
 
 h3.section-h3-title {
     font-family: $primary_font_family;
     color: #fff;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     padding-bottom: 1rem;
     align-self: flex-start;
 
     @include breakpoint(desktop) {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     @include breakpoint(large-desktop) {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 }
 
 .paragraph-primary-18 {
     font-size: 1.125rem;
+
+    @include breakpoint(desktop) {
+        font-size: 1rem;
+    }
 }
+
 .paragraph-primary-16 {
     font-size: 1rem;
 }

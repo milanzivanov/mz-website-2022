@@ -193,7 +193,7 @@ async function fetchUsers() {
                   href="${work.linkSrc}"
                   class="magnific-popup-link" 
                   target="_blank">
-                      <img src="${work.src}" alt="${work.author}" />
+                      <img loading="lazy" src="${work.src}" alt="${work.author}" />
               </a>
           </div>
           <div class="projects__row--text">
