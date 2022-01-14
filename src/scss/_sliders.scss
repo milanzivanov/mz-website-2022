@@ -1,6 +1,12 @@
 // slick slider
 .experience-slider__top {
     position: relative;
+    padding: 0.5rem 0;
+
+    @include breakpoint(desktop) {
+        margin: 0 0.5rem;
+    }
+
 }
 .experience-slider__bottom {
     display: none;
@@ -53,7 +59,7 @@
     flex-direction: column;
     padding: 0.5rem;
     background-color: #bdc2c7;
-    height: 100vw;
+    // height: 100vw;
     display: flex;
     justify-content: center;
     border-radius: 5px;

@@ -130,7 +130,7 @@ main.container {
     align-items: center;
     position: relative;
     flex-wrap: wrap;
-    padding: 2.5rem 0;
+    padding: 0;
     background-color: #ccc;
 
     background-size: cover;
@@ -138,10 +138,12 @@ main.container {
 
     @include breakpoint(desktop) {
         flex-direction: row;
+        padding: 2.5rem 0;
         background: 
         linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
         url(../src/img/common-bg.svg);
     }
+
     @include breakpoint(large-desktop) {
         padding: 5rem 0;
     }
@@ -204,12 +206,13 @@ main.container {
     position: relative;
     z-index: 5;
     background-color: #fff;
-    padding: 1rem;
+    // padding: 0 1rem;
     box-shadow: 1px 1px 1px #d6e2ed;
     font-size: 1rem;
     border-radius: 5px;
 
     @include breakpoint(desktop) {
+        // padding: 1rem;
         box-shadow: none;
         font-size: 1rem;
     }
@@ -219,7 +222,7 @@ main.container {
 }
 
 .about-container__paragraph {
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 .about-container__paragraph--border-bottom {
@@ -227,28 +230,36 @@ main.container {
 }
 
 h2.about__title {
-    width: 75%;
     z-index: 5;
-    text-align: center;
-    padding: 1rem;
+    text-align: left;
+    padding: .8rem;
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
     background-color: rgb(255 255 255 / 80%);
     box-shadow: 1px 1px 1px #d6e2ed;
+    font-size: 1rem;
 
     @include breakpoint(desktop) {
-        width: 70%;
+        font-size: 1.3rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    @include breakpoint(large-desktop) {
+        font-size: 1.7rem;
     }
 
 }
 
 .about__title--left {
+    width: 35%;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .about__title--right {
+    width: 50%;
     right: 0;
     left: auto;
     border-bottom-left-radius: 5px;
@@ -293,10 +304,19 @@ h2.about__title {
     background-color: #000;
 }
 
+
+.projects-title {
+    background-color: #222;
+
+    @include breakpoint(desktop) {
+        background-color: transparent;
+    }
+}
+
 .projects__row {
     display: flex;
-    grid-gap: 3rem;
     flex-direction: column;
+    padding: 1rem 0;
 
     @include breakpoint(desktop) {
         padding-bottom: 5rem;

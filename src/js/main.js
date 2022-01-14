@@ -20,8 +20,18 @@ jQuery(function () {
     image: {
       // options for image content type
       titleSrc: "title",
-    },
+    }
+
   });
+
+  // reset input 
+  // $(".btn-trigger-reset").on('click', function(e) {
+  //   // document.getElementById("contactForm").reset();
+  //   $('#email-form').val("");
+  //   $('#message-form').val("");
+
+  //   console.log(123);
+  // });
 
   // btt
   if ($(".back-to-top").length) {
