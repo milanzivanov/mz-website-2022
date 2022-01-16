@@ -234,12 +234,16 @@ h2.about__title {
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
+    font-size: 1rem;
+
     // background-color: rgb(255 255 255 / 80%);
     // box-shadow: 1px 1px 1px #d6e2ed;
 
-    background-color: #222;
-    box-shadow: 1px 1px 1px #23a6d5;
-    font-size: 1rem;
+    background: 
+        linear-gradient(45deg,rgba(44,134,169,.7),#063250,#0071bc,#000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: $white;
 
     @include breakpoint(desktop) {
         font-size: 1.3rem;
