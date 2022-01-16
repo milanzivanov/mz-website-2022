@@ -11,7 +11,7 @@
         href="https://fonts.gstatic.com" 
         crossorigin>
     <link 
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@200;300;500;600;800&display=swap" 
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;500;700&display=swap" 
         rel="stylesheet"
         crossorigin="anonymous">
 
@@ -121,6 +121,11 @@
         crossorigin="anonymous">
     </script>
 
+    <script
+      defer 
+      src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js">
+    </script>
+
     <script defer src="./dist/main.js"></script>
 
     <meta
@@ -136,12 +141,14 @@
         <div class="wrapper-inner header__content">
           <div class="header__logo">
             <a href="./index.html">
+              <!-- my logo version 2 -->
               <img
                 src="./src/img/new-logo-2021.svg"
                 alt="desktop main logo milan zivanov"
               />
+              <!-- my logo version 1 and if I want tu use it height, width remove from version 2-->
               <!-- <img
-                src="https://ik.imagekit.io/milanz/milanzivanov_com/newMyLogoDesign2020-2_GY0ZJe0CVxjE2.png?tr=w-100,h-75"
+                src="https://ik.imagekit.io/milanz/milanzivanov_com/newMyLogoDesign2020-2_GY0ZJe0CVxjE2.png"
                 alt="desktop main logo milan zivanov"
               /> -->
             </a>
@@ -214,10 +221,10 @@
               About me
           </h2>
 
-          <picture class="about-container__box--img">
-              <source media="(min-width: 1366px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/Milan_right_KBdgTD8wu.webp?tr=w-856,h-645">
-              <source media="(min-width: 1024px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/Milan_right_KBdgTD8wu.webp?tr=w-579,h-436">
-              <source media="(min-width: 360px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/Milan_left_HDZzAm0Td.webp?tr=w-412,h-310">
+          <picture class="about-container__box--img" loadin="lazy">
+              <source media="(min-width: 1366px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/lokingLeft_9yfbVgcng.webp?tr=w-856,h-645">
+              <source media="(min-width: 1024px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/lokingLeft_9yfbVgcng.webp?tr=w-579,h-436">
+              <source media="(min-width: 360px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/lokingLeft_9yfbVgcng.webp?tr=w-412,h-310">
             <img 
                 src="https://ik.imagekit.io/milanz/milanzivanov_com/new-me_DpfUJmgPK.jpg"
                 alt="picture of my self loking in the corner image left">
@@ -257,7 +264,7 @@
           <h2 class="section-h2-title about__title about__title--right">
               work Experience
           </h2>
-          <picture class="about-container__box--img">
+          <picture class="about-container__box--img" loadin="lazy">
             <source media="(min-width: 1366px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/laptopOnTheTable_JMkxPdNex.webp?tr=w-856,h-645">
             <source media="(min-width: 1024px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/laptop-glasses_6MoCrSz_xkM___1__7db87K7nR.webp?tr=w-579,h-436">
             <source media="(min-width: 360px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/bg-main_Lz14YLljkz__1__8rtdi0japHY.webp?tr=w-412,h-310">

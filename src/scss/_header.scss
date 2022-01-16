@@ -21,8 +21,8 @@
     }
 
     @include breakpoint(desktop) {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
         margin-left: 0;
     }
 }
@@ -95,7 +95,6 @@ nav.nav-desktop {
           
         // making the dividers
         > span {
-            // the second divider
             display: inline-block;
             position: relative;
             height: 3px;
@@ -104,7 +103,6 @@ nav.nav-desktop {
             background: #222;
             vertical-align: middle;
             
-            // the first & the third dividers
             &:before, &:after {
             display: inline-block;
                 position: absolute;
@@ -112,7 +110,6 @@ nav.nav-desktop {
                 height: 3px;
                 border-radius: 1px;
                 background: #222;
-                // for the hover state
                 transition: all 200ms;
             }
             &:before {

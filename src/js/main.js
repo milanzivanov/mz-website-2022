@@ -33,6 +33,11 @@ jQuery(function () {
   //   console.log(123);
   // });
 
+  // parallax
+  // not in use for now
+  // let image = document.getElementsByClassName('about-container__box--parallax');
+  // new simpleParallax(image, {});
+
   // btt
   if ($(".back-to-top").length) {
     const scrollTrigger = 100, // px

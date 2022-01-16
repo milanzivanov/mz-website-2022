@@ -58,7 +58,7 @@ main.container {
     padding: .5rem;
     width: 95%;
     font-family: $primary_font_family;
-    color: white;
+    color: #fff;
     font-style: normal;
     text-align: left;
     position: relative;
@@ -206,13 +206,11 @@ main.container {
     position: relative;
     z-index: 5;
     background-color: #fff;
-    // padding: 0 1rem;
     box-shadow: 1px 1px 1px #d6e2ed;
     font-size: 1rem;
     border-radius: 5px;
 
     @include breakpoint(desktop) {
-        // padding: 1rem;
         box-shadow: none;
         font-size: 1rem;
     }
@@ -236,8 +234,11 @@ h2.about__title {
     position: absolute;
     transform: translateY(-50%);
     top: 50%;
-    background-color: rgb(255 255 255 / 80%);
-    box-shadow: 1px 1px 1px #d6e2ed;
+    // background-color: rgb(255 255 255 / 80%);
+    // box-shadow: 1px 1px 1px #d6e2ed;
+
+    background-color: #222;
+    box-shadow: 1px 1px 1px #23a6d5;
     font-size: 1rem;
 
     @include breakpoint(desktop) {

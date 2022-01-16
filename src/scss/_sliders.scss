@@ -59,7 +59,7 @@
     flex-direction: column;
     padding: 0.5rem;
     background-color: #bdc2c7;
-    // height: 100vw;
+    height: 100vw;
     display: flex;
     justify-content: center;
     border-radius: 5px;
@@ -74,9 +74,11 @@
         color: #23a6d5;
         padding: 0  0 .5rem 0;
         text-align: center;
+        font-size: 1.1rem;
 
         @include breakpoint(desktop) {
             text-align: left;
+            font-size: 1.3rem;
         }
     }
 
@@ -85,10 +87,11 @@
         box-shadow: 1px 1px 1px #d6e2ed;
         background-color: aliceblue;
         border-radius: 5px;
+        height: 50vh;
 
-        // @include breakpoint(desktop) {
-        //     font-size: 1rem;
-        // }
+        @include breakpoint(desktop) {
+            height: auto;
+        }
     }
         
 }
