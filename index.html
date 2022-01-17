@@ -52,6 +52,10 @@
     />
 
     <link 
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css" 
+        rel="stylesheet">
+
+    <link 
         rel="stylesheet" 
         href="./dist/style.css" 
         crossorigin="anonymous" />
@@ -126,6 +130,13 @@
       src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js">
     </script>
 
+    <script
+        defer
+        rel="preload"
+        as="script" 
+        src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+
     <script defer src="./dist/main.js"></script>
 
     <meta
@@ -187,7 +198,9 @@
       </header>
 
       <div class="hero-content">
-        <div class="hero-content__text">
+        <div 
+          data-aos="fade-right" 
+          class="hero-content__text">
           <h1 class="hero-content__title hero__title--primary">
             I'm <span>Milan.</span>
           </h1>
@@ -215,13 +228,19 @@
     <!-- about me -->
     <section class="about" id="sectionAbout">
       <div class="wrapper-inner about-container">
-        <div class="about-container__box about-container__box--backdrop">
+        <div 
+          class="about-container__box about-container__box--backdrop"
+          data-aos="fade-right"
+          data-aos-delay="40">
 
-          <h2 class="section-h2-title about__title about__title--left">
+          <h2 
+            class="section-h2-title about__title about__title--left">
               About me
           </h2>
 
-          <picture class="about-container__box--img" loading="lazy">
+          <picture 
+            class="about-container__box--img" 
+            loading="lazy">
               <source media="(min-width: 1366px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/lokingLeft_9yfbVgcng.webp?tr=w-856,h-645">
               <source media="(min-width: 1024px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/lokingLeft_9yfbVgcng.webp?tr=w-579,h-436">
               <source media="(min-width: 360px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/lokingLeft_9yfbVgcng.webp?tr=w-412,h-310">
@@ -232,7 +251,9 @@
 
         </div>
         <div class="about-container__box">
-          <div class="about-container__text about-container__text--top">
+          <div 
+            class="about-container__text about-container__text--top"
+            data-aos="fade-left">
             <p
               class="paragraph-primary-18 about-container__paragraph about-container__paragraph--border-bottom"
             >
@@ -260,11 +281,17 @@
       </div>
 
       <div class="wrapper-inner about-container about-container--reverse">
-        <div class="about-container__box about-container__box--backdrop">
-          <h2 class="section-h2-title about__title about__title--right">
+        <div 
+          class="about-container__box about-container__box--backdrop"
+          data-aos="fade-left" 
+          data-aos-delay="40">
+          <h2 
+            class="section-h2-title about__title about__title--right">
               work Experience
           </h2>
-          <picture class="about-container__box--img" loading="lazy">
+          <picture 
+            class="about-container__box--img" 
+            loading="lazy">
             <source media="(min-width: 1366px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/laptopOnTheTable_JMkxPdNex.webp?tr=w-856,h-645">
             <source media="(min-width: 1024px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/laptop-glasses_6MoCrSz_xkM___1__7db87K7nR.webp?tr=w-579,h-436">
             <source media="(min-width: 360px)" srcset="https://ik.imagekit.io/milanz/milanzivanov_com/bg-main_Lz14YLljkz__1__8rtdi0japHY.webp?tr=w-412,h-310">
@@ -275,7 +302,9 @@
 
         </div>
         <div class="about-container__box about-container__box--right">
-          <div class="about-container__text about-container__text--bottom">
+          <div 
+            class="about-container__text about-container__text--bottom"
+            data-aos="fade-right">
             <div class="experience-slider">
               <div class="experience-slider__top">
                 <div class="arrow-slider__left">
@@ -563,7 +592,7 @@
                 rel="noopener noreferrer"
               >
                 <img 
-                    src="./src/img/logo-hire-m-2021.svg" 
+                    src="./src/img/logo-hiro-2021.svg" 
                     alt="footer logo" />
               </a>
               <p class="paragraph-primary-16">

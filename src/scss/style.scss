@@ -156,6 +156,7 @@ main.container {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 
     @include breakpoint(desktop) {
         flex-direction: row;
@@ -307,6 +308,7 @@ h2.about__title {
 // projects
 .projects {
     background-color: #000;
+    overflow: hidden;
 }
 
 

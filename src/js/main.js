@@ -180,6 +180,9 @@ particlesJS("particles-js", {
   },
 });
 
+// AOS
+AOS.init();
+
 // json file with my fe works
 let requestURL = "https://milanzivanov.github.io/Data/works.json";
 let section = document.querySelector(".projects__content");
@@ -202,10 +205,13 @@ async function fetchUsers() {
     output += `
     
 
-      <div class="projects__row projects__row--reverse">
+      <div 
+        class="projects__row projects__row--reverse"
+        data-aos="flip-left">
           <div class="projects__row--img">
               <a 
                   href="${work.linkSrc}"
+                  rel="dns-prefetch"
                   class="magnific-popup-link" 
                   target="_blank">
 
@@ -221,13 +227,17 @@ async function fetchUsers() {
 
               </a>
           </div>
+
           <div class="projects__row--text">
               <div class="text-container">
-                  <h3 class="section-h3-title project-container--title">${work.title}</h3>
+                  <h3 class="section-h3-title project-container--title">
+                    ${work.title}
+                  </h3>
                   <p class="paragraph-primary-16 text-container--description">${work.body}</p>
 
                   <a 
-                      class="popup-link btn btn--size btn--theme" 
+                      class="popup-link btn btn--size btn--theme"
+                      rel="dns-prefetch" 
                       href="${work.linkSrc}"
                       target="_blank">
                       Case Study
