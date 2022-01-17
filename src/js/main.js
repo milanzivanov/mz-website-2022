@@ -208,7 +208,17 @@ async function fetchUsers() {
                   href="${work.linkSrc}"
                   class="magnific-popup-link" 
                   target="_blank">
-                      <img loading="lazy" src="${work.src}" alt="${work.author}" />
+
+                <picture loading="lazy">
+                  <source media="(min-width: 1366px)" srcset="${work.srcLargeDesktop}">
+                  <source media="(min-width: 1024px)" srcset="${work.srcDesktop}">
+                  <source media="(min-width: 360px)" srcset="${work.srcMobile}">
+                  <img 
+                    loading="lazy"
+                    src="${work.src}" 
+                    alt="${work.title}" />
+                </picture>
+
               </a>
           </div>
           <div class="projects__row--text">

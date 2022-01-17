@@ -336,6 +336,7 @@ h2.about__title {
     @include breakpoint(desktop) {
         flex-direction: row-reverse;
     }
+
 }
 
 .projects__row--img {
@@ -347,6 +348,7 @@ h2.about__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .text-container {
