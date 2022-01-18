@@ -23,7 +23,7 @@ main.container {
 
     background: 
         linear-gradient(90deg,rgba(2,2,2,.8), $black),
-        url(../src/img/common-bg.svg);
+        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
         background-size: 400% 400%;
     
     animation: gradient 15s ease infinite;
@@ -129,7 +129,6 @@ main.container {
     position: relative;
     flex-wrap: wrap;
     padding: 0;
-    // background-color: #ccc;
     background-color: $ltGray;
 
     background-size: cover;
@@ -140,7 +139,7 @@ main.container {
         padding: 2.5rem 0;
         background: 
         linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
-        url(../src/img/common-bg.svg);
+        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
     }
 
     @include breakpoint(large-desktop) {
@@ -366,7 +365,7 @@ h2.about__title {
     background-color: #f0f8ff;
     background: 
         linear-gradient(90deg,rgba(2,2,2,.65), $black),
-        url(../src/img/common-bg.svg);
+        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
         background-size: 100% 100%;
 
     padding: 2rem;
@@ -392,7 +391,7 @@ section.contact {
     background-color: $ltGray;
     background: 
         linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
-        url(../src/img/common-bg.svg);
+        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
     background-size: cover;
     background-position: 50%;
 
