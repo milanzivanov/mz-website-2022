@@ -3,10 +3,10 @@ footer.footer-box {
     display: flex;
     position: relative;
     padding: 3rem 0 8rem 0;
-    color: #fff;
+    color: $white;
 
     background: 
-    linear-gradient(90deg,rgba(2,2,2,.8), #000),
+    linear-gradient(90deg,rgba(2,2,2,.8), $black),
     url(../src/img/common-bg.svg);
     background-size: 400% 400%;
 }
@@ -46,7 +46,7 @@ h3.footer-box__title {
 
     p {
         padding: 1rem;
-        background-color: #1a1a1a;
+        background-color: $ltBlack;
         border-radius: 5px;
     }
     
@@ -107,15 +107,18 @@ ul.footer-nav {
     flex-direction: column;
     align-items: flex-start;
 
+    @include breakpoint(tablet) {
+        align-items: center;
+        margin: 0;
+    } 
     @include breakpoint(desktop) {
         flex-direction: row;
-        margin: 0;
     } 
 }
 
 a.footer-nav__link {
     display: flex;
-    color: #fff;
+    color: $white;
     align-items: center;
     text-decoration: none;
     font-size: 1.5rem;
@@ -133,7 +136,7 @@ a.footer-nav__link {
 }
 
 span.name {
-    color: #fff;
+    color: $white;
     padding-left: .5rem;
 }
 

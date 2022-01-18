@@ -40,13 +40,13 @@
 }
 
 .btn--theme {
-    background: #0071bc;
+    background: $secondery-blue;
     color: #fff;
 }
 
 .btn--size {
     padding: .5rem 2rem;
-    font-size: .8rem;
+    font-size: .75rem;
 
     @include breakpoint(desktop) {
         font-size: 1rem;

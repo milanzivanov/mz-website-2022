@@ -58,14 +58,17 @@
 .slider-flex__text {
     flex-direction: column;
     padding: 0.5rem;
-    background-color: #bdc2c7;
+    background-color: $white;
     height: 100vw;
     display: flex;
     justify-content: center;
     border-radius: 5px;
 
+    @include breakpoint(tablet) {
+        height: 50vw;
+    }
     @include breakpoint(desktop) {
-        background-color: #fff;
+        background-color: $white;
         height: auto;
     }
 

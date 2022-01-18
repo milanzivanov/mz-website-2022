@@ -14,8 +14,6 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    // font-family: 'Open Sans', sans-serif;
-    // font-family: 'Raleway', sans-serif;
 }
 
 main.container {
@@ -24,7 +22,7 @@ main.container {
     overflow: hidden;
 
     background: 
-        linear-gradient(90deg,rgba(2,2,2,.8), #000),
+        linear-gradient(90deg,rgba(2,2,2,.8), $black),
         url(../src/img/common-bg.svg);
         background-size: 400% 400%;
     
@@ -58,7 +56,7 @@ main.container {
     padding: .5rem;
     width: 95%;
     font-family: $primary_font_family;
-    color: #fff;
+    color: $white;
     font-style: normal;
     text-align: left;
     position: relative;
@@ -69,10 +67,10 @@ main.container {
         background-color: rgb(6, 6, 6, .7);
         padding: 1.5rem;
         background: linear-gradient(
-            45deg,rgb(44 134 169 / 70%),#063250,#0071bc,#000);
+            45deg,rgb(44 134 169 / 70%),#063250,#0071bc, $black);
         background-size: 400% 400%;
         animation: gradient 15s ease infinite;
-        width: 50%;
+        width: 55%;
     }
 }
 
@@ -104,10 +102,10 @@ main.container {
 }
 
 .hero__title--secondery {
-    text-shadow: 1px 1px 1px #222;
+    text-shadow: 1px 1px 1px $black;
 
     span {
-        color: #03a9f4;
+        color: $primary-blue;
     }
 }
 
@@ -131,7 +129,8 @@ main.container {
     position: relative;
     flex-wrap: wrap;
     padding: 0;
-    background-color: #ccc;
+    // background-color: #ccc;
+    background-color: $ltGray;
 
     background-size: cover;
     background-position: 50%;
@@ -160,7 +159,7 @@ main.container {
 
     @include breakpoint(desktop) {
         flex-direction: row;
-        background-color: #fff;
+        background-color: $white;
     }
 
     @include breakpoint(large-desktop) {
@@ -206,7 +205,7 @@ main.container {
 .about-container__text {
     position: relative;
     z-index: 5;
-    background-color: #fff;
+    background-color: $white;
     box-shadow: 1px 1px 1px #d6e2ed;
     font-size: 1rem;
     border-radius: 5px;
@@ -237,19 +236,19 @@ h2.about__title {
     top: 50%;
     font-size: 1rem;
 
-    // background-color: rgb(255 255 255 / 80%);
-    // box-shadow: 1px 1px 1px #d6e2ed;
-
     background: 
         linear-gradient(45deg,rgba(44,134,169,.7),#063250,#0071bc,#000);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     color: $white;
 
-    @include breakpoint(desktop) {
-        font-size: 1.3rem;
+    @include breakpoint(tablet) {
+        font-size: 1.1rem;
         padding: 1rem;
         text-align: center;
+    }
+    @include breakpoint(desktop) {
+        font-size: 1.3rem;
     }
 
     @include breakpoint(large-desktop) {
@@ -307,13 +306,13 @@ h2.about__title {
 //////////////////
 // projects
 .projects {
-    background-color: #000;
+    background-color: $black;
     overflow: hidden;
 }
 
 
 .projects-title {
-    background-color: #222;
+    background-color: $ltBlack;
 
     @include breakpoint(desktop) {
         background-color: transparent;
@@ -343,6 +342,14 @@ h2.about__title {
 
 .projects__row--img {
     flex: 1.5;
+
+    @include breakpoint(tablet) {
+        align-self: center;
+    }
+
+    @include breakpoint(desktop) {
+        align-self: flex-end;
+    }
 }
 
 .projects__row--text {
@@ -358,14 +365,14 @@ h2.about__title {
     flex-direction: column;
     background-color: #f0f8ff;
     background: 
-        linear-gradient(90deg,rgba(2,2,2,.65), #000),
+        linear-gradient(90deg,rgba(2,2,2,.65), $black),
         url(../src/img/common-bg.svg);
         background-size: 100% 100%;
 
     padding: 2rem;
     align-items: flex-end;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px #222;
+    box-shadow: 1px 1px 1px $ltBlack;
 
 }
 
@@ -374,7 +381,7 @@ h2.about__title {
     margin-bottom: 3rem;
     letter-spacing: .3px;
     padding: 0.5rem;
-    background: #fff;
+    background-color: $white;
     border-radius: 5px;
 }
 
@@ -382,7 +389,7 @@ h2.about__title {
 // contact
 section.contact {
     padding: 0 0 2rem;
-    background-color: #f0f8ff;
+    background-color: $ltGray;
     background: 
         linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
         url(../src/img/common-bg.svg);
@@ -399,7 +406,7 @@ section.contact {
 
 .contact__form-container {
     box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-    background: #fff;
+    background: $white;
     padding: 1rem;
     max-width: 60rem;
     text-align: right;
@@ -408,7 +415,7 @@ section.contact {
 }
 
 .contact__form-label {
-    color: #222;
+    color: $ltBlack;
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 700;
@@ -418,13 +425,13 @@ section.contact {
 }
 
 .contact__form-input {
-    color: #333;
+    color: $ltBlack;
     padding: 1rem;
     width: 100%;
-    border: 1px solid #ebebeb;
+    border: 1px solid #d6e2ed;
     font-size: 1rem;
     letter-spacing: 0px;
-    background: #f0f0f0;
+    background: $ltGray;
     border-radius: 5px;
     font-weight: 600;
 }
@@ -451,6 +458,7 @@ section.contact {
     margin: 5px;
     z-index: 20;
     border-radius: 5px;
+    box-shadow: 0px 1px 5px #d6e2ed;
 }
 .back-to-top.show {
     display: flex;
