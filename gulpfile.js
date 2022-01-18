@@ -43,7 +43,8 @@ gulp.task('jsTask', function() {
       .pipe(sourcemaps.write()) // Inline source maps.
       .pipe(gulp.dest('./dist'))
       .pipe(browserSync.stream());
-  });
+});
+
 
 // Static Server & watching scss/js/html files
 gulp.task('serve', gulp.series('sassTask', function() {
@@ -59,6 +60,9 @@ gulp.task('serve', gulp.series('sassTask', function() {
 
     gulp.watch("*.html").on('change', browserSync.reload);
   }));
+
+  gulp.task('build', gulp.series('sassTask', "jsTask", 'serve'));
+
   
   gulp.task('default',
-    gulp.series('sassTask', "jsTask", 'serve'));
+    gulp.series('build', 'sassTask', "jsTask", 'serve'));
