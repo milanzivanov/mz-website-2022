@@ -26,25 +26,24 @@ gulp.task("sassTask", function() {
 
 // JS task: uglifies JS files to main.js
 gulp.task('jsTask', function() {
-    return gulp
-      .src(path.src_js)
-      .pipe(sourcemaps.init())
-      .pipe(terser({
-          mangle: {
-              toplevel: true
-          }
-      }))
-      .on('error', function (error) {
-          if (error.plugin !== "gulp-terser-js") {
-              console.log(error.message)
-          }
-        this.emit('end')
-      })
-      .pipe(sourcemaps.write()) // Inline source maps.
-      .pipe(gulp.dest('./dist'))
-      .pipe(browserSync.stream());
+  return gulp
+    .src(path.src_js)
+    .pipe(sourcemaps.init())
+    .pipe(terser({
+        mangle: {
+            toplevel: true
+        }
+    }))
+    .on('error', function (error) {
+        if (error.plugin !== "gulp-terser-js") {
+            console.log(error.message)
+        }
+      this.emit('end')
+    })
+    .pipe(sourcemaps.write()) // Inline source maps.
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.stream());
 });
-
 
 // Static Server & watching scss/js/html files
 gulp.task('serve', gulp.series('sassTask', function() {
@@ -61,8 +60,7 @@ gulp.task('serve', gulp.series('sassTask', function() {
     gulp.watch("*.html").on('change', browserSync.reload);
   }));
 
-  gulp.task('build', gulp.series('sassTask', "jsTask", 'serve'));
+gulp.task('build', gulp.series('sassTask', "jsTask", 'serve'));
 
-  
-  gulp.task('default',
-    gulp.series('build', 'sassTask', "jsTask", 'serve'));
+gulp.task('default',
+  gulp.series('build', 'sassTask', "jsTask", 'serve'));

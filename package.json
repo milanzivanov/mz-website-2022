@@ -4,7 +4,7 @@
   "description": "gulp 4 starter",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
+    "dev": "gulp",
     "build": "gulp build"
   },
   "author": "mz",
