@@ -60,7 +60,5 @@ gulp.task('serve', gulp.series('sassTask', function() {
     gulp.watch("*.html").on('change', browserSync.reload);
   }));
 
-gulp.task('build', gulp.series('sassTask', "jsTask", 'serve'));
-
 gulp.task('default',
-  gulp.series('build', 'sassTask', "jsTask", 'serve'));
+  gulp.series('sassTask', "jsTask", 'serve'));
