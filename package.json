@@ -4,6 +4,7 @@
   "description": "gulp 4 starter",
   "main": "index.js",
   "scripts": {
+    "build": "gulp"
   },
   "author": "mz",
   "license": "ISC",
