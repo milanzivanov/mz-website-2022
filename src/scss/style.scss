@@ -76,9 +76,9 @@ main.container {
 
 .hero-content__title {
     width: 100%;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 3.1rem;
-    line-height: 3.2rem;
+    line-height: 3.1rem;
 
     @include breakpoint(desktop) {
         font-size: 3.3rem;
@@ -103,6 +103,7 @@ main.container {
 
 .hero__title--secondery {
     text-shadow: 1px 1px 1px $black;
+    font-weight: 700;
 
     span {
         color: $primary-blue;
@@ -219,7 +220,15 @@ main.container {
 }
 
 .about-container__paragraph {
-    padding: 1rem;
+    margin: 0 .5rem;
+    padding: 1rem 0.5rem;
+    text-align: justify;
+
+        @include breakpoint(desktop) {
+            margin: 0 1rem;
+            padding: 1rem 0;
+            text-align: inherit;
+    }
 }
 
 .about-container__paragraph--border-bottom {
@@ -234,10 +243,11 @@ h2.about__title {
     transform: translateY(-50%);
     top: 50%;
     font-size: 1rem;
+    letter-spacing: .5px;
 
     background: 
         linear-gradient(45deg,rgba(44,134,169,.7),#063250,#0071bc,#000);
-    background-size: 400% 400%;
+    background-size: 200% 200%;
     animation: gradient 15s ease infinite;
     color: $white;
 
@@ -247,6 +257,7 @@ h2.about__title {
         text-align: center;
     }
     @include breakpoint(desktop) {
+        background-size: 400% 400%;
         font-size: 1.3rem;
     }
 

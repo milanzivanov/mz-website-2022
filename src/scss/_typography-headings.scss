@@ -3,6 +3,7 @@ h2.section-h2-title {
     text-align: center;
     text-transform: uppercase;
     font-family: $primary_font_family;
+    font-weight: 600;
     font-size: 1.5rem;
     color: #23a6d5;
 
@@ -17,7 +18,7 @@ h2.section-h2-title {
 
 h3.section-h3-title {
     font-family: $primary_font_family;
-    color: #fff;
+    color: $white;
     font-size: 1.3rem;
     padding-bottom: 1rem;
     align-self: flex-start;
@@ -32,6 +33,8 @@ h3.section-h3-title {
 
 .paragraph-primary-18 {
     font-size: 1.125rem;
+    font-weight: 400;
+    text-align: justify;
 
     @include breakpoint(desktop) {
         font-size: 1rem;
