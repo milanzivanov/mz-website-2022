@@ -22,14 +22,19 @@ main.container {
     overflow: hidden;
 
     background: 
-        linear-gradient(90deg,rgba(2,2,2,.8), $black),
-        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-        background-size: 400% 400%;
+    linear-gradient(90deg,rgba(2,2,2,.6), $black),
+    url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+    background-size: cover;
     
-    animation: gradient 15s ease infinite;
-
+    animation: none;
+    
     @include breakpoint(desktop) {
+        background: 
+            linear-gradient(90deg,rgba(2,2,2,.8), $black),
+            url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+        background-size: 400% 400%;
         height: 100vh;
+        animation: gradient 15s ease infinite;
     }
 }
 
@@ -76,11 +81,12 @@ main.container {
 
 .hero-content__title {
     width: 100%;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 3.1rem;
     line-height: 3.1rem;
 
     @include breakpoint(desktop) {
+        font-weight: 600;
         font-size: 3.3rem;
         line-height: 3.3rem;
     }
@@ -103,7 +109,7 @@ main.container {
 
 .hero__title--secondery {
     text-shadow: 1px 1px 1px $black;
-    font-weight: 700;
+    font-weight: 800;
 
     span {
         color: $primary-blue;
@@ -222,12 +228,12 @@ main.container {
 .about-container__paragraph {
     margin: 0 .5rem;
     padding: 1rem 0.5rem;
-    text-align: justify;
+    text-align: inherit;
 
         @include breakpoint(desktop) {
             margin: 0 1rem;
             padding: 1rem 0;
-            text-align: inherit;
+            text-align: justify;
     }
 }
 

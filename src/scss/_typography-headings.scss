@@ -34,9 +34,10 @@ h3.section-h3-title {
 .paragraph-primary-18 {
     font-size: 1.125rem;
     font-weight: 400;
-    text-align: justify;
-
+    text-align: inherit;
+    
     @include breakpoint(desktop) {
+        text-align: justify;
         font-size: 1rem;
     }
 }
