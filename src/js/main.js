@@ -181,75 +181,185 @@ particlesJS("particles-js", {
 });
 
 // AOS
-AOS.init();
+AOS.init({});
 
 // json file with my fe works
-let requestURL = "https://milanzivanov.github.io/Data/works.json";
-let section = document.querySelector(".projects__content");
-// let titleName = document.querySelector(".projects .wrapper-inner");
+async function populate() {
 
-async function fetchUsers() {
-  const res = await fetch(requestURL);
+  const requestURL = "https://milanzivanov.github.io/Data/works.json";
+  const request = new Request(requestURL);
+
+  const res = await fetch(request);
   const data = await res.json();
-  let works = data.works;
 
-  // let myH2 = document.createElement("h2");
-  // myH2.classList.add("projects-title");
-  // myH2.textContent = data.titleName;
-  // titleName.appendChild(myH2);
+  populateSkills(data);
+  populateWorks(data);
 
-  output = "";
-
-  for (let work of works) {
-
-    output += `
-    
-
-      <div 
-        class="projects__row projects__row--reverse"
-        data-aos="flip-left">
-          <div class="projects__row--img">
-              <a 
-                  href="${work.linkSrc}"
-                  rel="dns-prefetch"
-                  class="magnific-popup-link" 
-                  target="_blank">
-
-                <picture loading="lazy">
-                  <source media="(min-width: 1366px)" srcset="${work.srcLargeDesktop}">
-                  <source media="(min-width: 1024px)" srcset="${work.srcDesktop}">
-                  <source media="(min-width: 360px)" srcset="${work.srcMobile}">
-                  <img 
-                    loading="lazy"
-                    src="${work.src}" 
-                    alt="${work.title}" />
-                </picture>
-
-              </a>
-          </div>
-
-          <div class="projects__row--text">
-              <div class="text-container">
-                  <h3 class="section-h3-title project-container--title">
-                    ${work.title}
-                  </h3>
-                  <p class="paragraph-primary-16 text-container--description">${work.body}</p>
-
-                  <a 
-                      class="popup-link btn btn--size btn--theme"
-                      rel="dns-prefetch" 
-                      href="${work.linkSrc}"
-                      target="_blank">
-                      Case Study
-                  </a>
-              </div>
-          </div>
-          
-      </div>
-      `;
-  }
-
-  section.innerHTML = output;
 }
 
-fetchUsers();
+// skills data
+function populateSkills(data) {
+  const containerSkills = document.querySelector(".skills-container-icons");
+  const skills = data.skills;
+  // console.log(skills);
+
+  for (const skill of skills) {
+    const skillIconBox = document.createElement('div');
+    skillIconBox.classList.add("skill-icon");
+    const skillImg = document.createElement('img');
+    const skillTitle = document.createElement('p');
+    
+    skillImg.alt = skill.iconTitle;
+    skillImg.src = skill.iconSrc;
+    skillTitle.textContent = skill.iconTitle;
+
+    skillIconBox.appendChild(skillImg);
+    skillIconBox.appendChild(skillTitle);
+
+    containerSkills.appendChild(skillIconBox);
+
+  }
+}
+
+// works data
+function populateWorks(data) {
+
+  const section = document.querySelector(".projects__content");
+  const works = data.works;
+
+  for (const work of works) {
+
+    const containerProjects = document.createElement("div");
+    containerProjects.className = "projects__row projects__row--reverse";
+    containerProjects.setAttribute("data-aos", "flip-left");
+
+    // 
+    const projectRowImg = document.createElement("div");
+    projectRowImg.classList.add("projects__row--img");
+
+    const projectAnchorLink = document.createElement("a");
+    projectAnchorLink.className = "magnific-popup-link";
+    projectAnchorLink.href = work.linkSrc;
+    projectAnchorLink.rel = "dns-prefetch";
+    projectAnchorLink.target = "_blank";
+
+    const imgProject = document.createElement("img");
+    imgProject.src = work.src;
+    imgProject.setAttribute("loading", "lazy");
+
+    // 
+    const projectRowText = document.createElement("div");
+    projectRowText.className = "projects__row--text";
+    const textContainer = document.createElement("div");
+    textContainer.classList.add("text-container");
+    projectRowText.appendChild(textContainer);
+    const h3TitleRowText = document.createElement("h3");
+    textContainer.appendChild(h3TitleRowText);
+    h3TitleRowText.className = "section-h3-title project-container--title";
+    h3TitleRowText.textContent = work.title;
+    const rowTextParagraph = document.createElement("p");
+    rowTextParagraph.className = "paragraph-primary-16 text-container--description";
+    rowTextParagraph.textContent = work.body;
+    textContainer.appendChild(rowTextParagraph);
+    const btnTextRow = document.createElement("a");
+    btnTextRow.className = "popup-link btn btn--size btn--theme";
+    btnTextRow.href= work.linkSrc;
+    btnTextRow.target = "_blank";
+    btnTextRow.rel = "dns-prefetch";
+    btnTextRow.textContent = "View It Here";
+    textContainer.appendChild(btnTextRow);
+    const myList = document.createElement('ul');
+    myList.classList.add("list-icon-container");
+
+    containerProjects.appendChild(projectRowImg);
+    containerProjects.appendChild(projectRowText);
+
+    projectRowImg.appendChild(projectAnchorLink);
+    projectAnchorLink.appendChild(imgProject);
+    
+    rowTextParagraph.appendChild(myList);
+
+    section.appendChild(containerProjects);
+
+
+    const skillsUsed = work.technologiesUsed;
+    for (const skill of skillsUsed) {
+      const listItem = document.createElement('li');
+      const listIcon = document.createElement('img');
+      listIcon.src = skill.svgIcon;
+      myList.appendChild(listItem);
+      listItem.appendChild(listIcon);
+    }
+
+  }
+
+}
+
+
+
+
+populate();
+
+// const section = document.querySelector(".projects__content");
+// // let titleName = document.querySelector(".projects .wrapper-inner");
+
+// async function fetchUsers() {
+//   const res = await fetch(requestURL);
+//   const data = await res.json();
+//   let works = data.works;
+
+//   output = "";
+
+//   for (let work of works) {
+
+//     output += `
+    
+
+//       <div 
+//         class="projects__row projects__row--reverse"
+//         data-aos="flip-left">
+//           <div class="projects__row--img">
+//               <a 
+//                   href="${work.linkSrc}"
+//                   rel="dns-prefetch"
+//                   class="magnific-popup-link" 
+//                   target="_blank">
+
+//                 <picture loading="lazy">
+//                   <source media="(min-width: 1366px)" srcset="${work.srcLargeDesktop}">
+//                   <source media="(min-width: 1024px)" srcset="${work.srcDesktop}">
+//                   <source media="(min-width: 360px)" srcset="${work.srcMobile}">
+//                   <img 
+//                     loading="lazy"
+//                     src="${work.src}" 
+//                     alt="${work.title}" />
+//                 </picture>
+
+//               </a>
+//           </div>
+
+//           <div class="projects__row--text">
+//               <div class="text-container">
+//                   <h3 class="section-h3-title project-container--title">
+//                     ${work.title}
+//                   </h3>
+//                   <p class="paragraph-primary-16 text-container--description">${work.body}</p>
+
+//                   <a 
+//                       class="popup-link btn btn--size btn--theme"
+//                       rel="dns-prefetch" 
+//                       href="${work.linkSrc}"
+//                       target="_blank">
+//                       Case Study
+//                   </a>
+//               </div>
+//           </div>
+          
+//       </div>
+//       `;
+//   }
+
+//   section.innerHTML = output;
+// }
+
+// fetchUsers();

@@ -320,12 +320,46 @@ h2.about__title {
 }
 
 //////////////////
+// skills and tools
+.skills {
+    background-color: #b6bbbf;
+    padding: 3rem 0;
+}
+
+.skills-container-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.skill-icon {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    align-items: center;
+    flex: 1;
+
+    img {
+        padding-bottom: .5rem;
+        width: 75px;
+        height: 75px;
+    }
+
+    p {
+        text-transform: uppercase;
+        color: #0071bc;
+    }
+}
+
+
+//////////////////
 // projects
 .projects {
     background-color: $black;
     overflow: hidden;
 }
-
 
 .projects-title {
     background-color: $ltBlack;
@@ -399,6 +433,19 @@ h2.about__title {
     padding: 0.5rem;
     background-color: $white;
     border-radius: 5px;
+}
+
+ul.list-icon-container {
+    display: flex;
+    padding-top: 1rem;
+
+    li {
+        padding: .3rem;
+    }
+
+    img {
+        width: 30px;
+    }
 }
 
 //////////////////////
