@@ -60,7 +60,7 @@ main.container {
     position: relative;
     padding: .5rem;
     width: 95%;
-    font-family: $primary_font_family;
+    font-family: Montserrat,Open Sans,sans-serif;
     color: $white;
     font-style: normal;
     text-align: left;
@@ -92,15 +92,15 @@ main.container {
     }
     
     @include breakpoint(large-desktop) {
-        font-size: 4.5rem;
-        line-height: 4.5rem;
+        font-size: 4rem;
+        line-height: 5rem;
     }
 }
 
 .hero__title--primary {
     span {
-        display: block;
-
+        text-shadow: 1px 1px 1px $black;
+        font-family: Poppins,Montserrat,sans-serif;
         @include breakpoint(desktop) {
             display: inline-block;
         }
@@ -109,9 +109,11 @@ main.container {
 
 .hero__title--secondery {
     text-shadow: 1px 1px 1px $black;
-    font-weight: 800;
+    font-weight: 700;
 
     span {
+        display: block;
+        font-family: Poppins,Montserrat,sans-serif;
         color: $primary-blue;
     }
 }
@@ -332,24 +334,46 @@ h2.about__title {
     align-items: center;
     padding: 1rem 0;
     flex-wrap: wrap;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+        width: 70%;
+        margin: auto;
+    }
+    @include breakpoint(large-desktop) {
+        width: 60%;
+        margin: auto;
+    }
+
 }
 
 .skill-icon {
     display: flex;
     flex-direction: column;
+    flex: 1 1 33.333%;    
     padding: 0.5rem;
     align-items: center;
-    flex: 1;
+    font-size: 2.5rem;
+    color: #23a6d5;
+    margin-bottom: 1.5rem;
 
-    img {
-        padding-bottom: .5rem;
-        width: 75px;
-        height: 75px;
+    @include breakpoint(desktop) {
+        flex: 1 1 15%;
+        font-size: 3rem;
+        margin-bottom: 2rem;
     }
-
+    @include breakpoint(large-desktop) {
+        font-size: 3.5rem;
+    }
+    
     p {
+        padding-top: .5rem;
         text-transform: uppercase;
-        color: #0071bc;
+        color: #222;
+        font-size: .7rem;
+        @include breakpoint(desktop) {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -427,6 +451,7 @@ h2.about__title {
 }
 
 .text-container--description {
+    width: 100%;
     box-shadow: 1px 1px 1px #d6e2ed;
     margin-bottom: 3rem;
     letter-spacing: .3px;
@@ -435,17 +460,36 @@ h2.about__title {
     border-radius: 5px;
 }
 
+p.paragraph-text {
+    padding-bottom: .5rem;
+}
+
+p.paragraph-time {
+    padding-bottom: .5rem;
+}
+
+.skill-container {
+    background-color: #d5dbe0;
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
 ul.list-icon-container {
     display: flex;
-    padding-top: 1rem;
-
+    flex-wrap: wrap;
     li {
-        padding: .3rem;
+        padding: .3rem 0.3rem 0.3rem 0;
     }
+}
 
-    img {
-        width: 30px;
-    }
+p.paragraph-strong {
+    font-weight: bold;
+}
+
+i.devicon {
+    font-size: 1.5rem;
+    color: $secondery-blue;
+    margin-right: .3rem;
 }
 
 //////////////////////

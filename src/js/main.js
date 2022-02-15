@@ -24,15 +24,6 @@ jQuery(function () {
 
   });
 
-  // reset input 
-  // $(".btn-trigger-reset").on('click', function(e) {
-  //   // document.getElementById("contactForm").reset();
-  //   $('#email-form').val("");
-  //   $('#message-form').val("");
-
-  //   console.log(123);
-  // });
-
   // parallax
   // not in use for now
   // let image = document.getElementsByClassName('about-container__box--parallax');
@@ -201,24 +192,20 @@ async function populate() {
 function populateSkills(data) {
   const containerSkills = document.querySelector(".skills-container-icons");
   const skills = data.skills;
-  // console.log(skills);
+
+  let output = "";
 
   for (const skill of skills) {
-    const skillIconBox = document.createElement('div');
-    skillIconBox.classList.add("skill-icon");
-    const skillImg = document.createElement('img');
-    const skillTitle = document.createElement('p');
-    
-    skillImg.alt = skill.iconTitle;
-    skillImg.src = skill.iconSrc;
-    skillTitle.textContent = skill.iconTitle;
-
-    skillIconBox.appendChild(skillImg);
-    skillIconBox.appendChild(skillTitle);
-
-    containerSkills.appendChild(skillIconBox);
-
+    output += `
+      <div class="skill-icon">
+        <i class="${skill.iconClass}"></i>
+        <p>${skill.iconTitle}</p>
+      </div>
+    `
   }
+
+  containerSkills.innerHTML = output;
+
 }
 
 // works data
@@ -236,6 +223,7 @@ function populateWorks(data) {
     // 
     const projectRowImg = document.createElement("div");
     projectRowImg.classList.add("projects__row--img");
+    containerProjects.appendChild(projectRowImg);
 
     const projectAnchorLink = document.createElement("a");
     projectAnchorLink.className = "magnific-popup-link";
@@ -250,17 +238,40 @@ function populateWorks(data) {
     // 
     const projectRowText = document.createElement("div");
     projectRowText.className = "projects__row--text";
+    containerProjects.appendChild(projectRowText);
+
     const textContainer = document.createElement("div");
     textContainer.classList.add("text-container");
     projectRowText.appendChild(textContainer);
+
     const h3TitleRowText = document.createElement("h3");
-    textContainer.appendChild(h3TitleRowText);
     h3TitleRowText.className = "section-h3-title project-container--title";
     h3TitleRowText.textContent = work.title;
+    textContainer.appendChild(h3TitleRowText);
+    
+    const rowTextDiv = document.createElement("div");
+    rowTextDiv.classList.add("text-container--description");
+    textContainer.appendChild(rowTextDiv);
+
     const rowTextParagraph = document.createElement("p");
-    rowTextParagraph.className = "paragraph-primary-16 text-container--description";
+    rowTextParagraph.className = "paragraph-primary-16 paragraph-text";
     rowTextParagraph.textContent = work.body;
-    textContainer.appendChild(rowTextParagraph);
+    rowTextDiv.appendChild(rowTextParagraph);
+
+    const rowTextTime = document.createElement("p");
+    rowTextTime.classList.add("paragraph-time");
+    rowTextTime.textContent = work.projectTime;
+    rowTextDiv.appendChild(rowTextTime);
+
+    const skillContainer = document.createElement("div");
+    skillContainer.classList.add("skill-container");
+    rowTextDiv.appendChild(skillContainer);
+
+    const rowTextStrong = document.createElement("p");
+    rowTextStrong.classList.add("paragraph-strong");
+    rowTextStrong.textContent = "Skill used:";
+    skillContainer.appendChild(rowTextStrong);
+
     const btnTextRow = document.createElement("a");
     btnTextRow.className = "popup-link btn btn--size btn--theme";
     btnTextRow.href= work.linkSrc;
@@ -268,26 +279,23 @@ function populateWorks(data) {
     btnTextRow.rel = "dns-prefetch";
     btnTextRow.textContent = "View It Here";
     textContainer.appendChild(btnTextRow);
-    const myList = document.createElement('ul');
-    myList.classList.add("list-icon-container");
 
-    containerProjects.appendChild(projectRowImg);
-    containerProjects.appendChild(projectRowText);
+    const skillList = document.createElement('ul');
+    skillList.classList.add("list-icon-container");
+    skillContainer.appendChild(skillList);
 
     projectRowImg.appendChild(projectAnchorLink);
     projectAnchorLink.appendChild(imgProject);
     
-    rowTextParagraph.appendChild(myList);
-
+    // 
     section.appendChild(containerProjects);
-
 
     const skillsUsed = work.technologiesUsed;
     for (const skill of skillsUsed) {
       const listItem = document.createElement('li');
-      const listIcon = document.createElement('img');
-      listIcon.src = skill.svgIcon;
-      myList.appendChild(listItem);
+      const listIcon = document.createElement('i');
+      listIcon.className = skill.svgIcon + " devicon";
+      skillList.appendChild(listItem);
       listItem.appendChild(listIcon);
     }
 
@@ -295,71 +303,5 @@ function populateWorks(data) {
 
 }
 
-
-
-
 populate();
 
-// const section = document.querySelector(".projects__content");
-// // let titleName = document.querySelector(".projects .wrapper-inner");
-
-// async function fetchUsers() {
-//   const res = await fetch(requestURL);
-//   const data = await res.json();
-//   let works = data.works;
-
-//   output = "";
-
-//   for (let work of works) {
-
-//     output += `
-    
-
-//       <div 
-//         class="projects__row projects__row--reverse"
-//         data-aos="flip-left">
-//           <div class="projects__row--img">
-//               <a 
-//                   href="${work.linkSrc}"
-//                   rel="dns-prefetch"
-//                   class="magnific-popup-link" 
-//                   target="_blank">
-
-//                 <picture loading="lazy">
-//                   <source media="(min-width: 1366px)" srcset="${work.srcLargeDesktop}">
-//                   <source media="(min-width: 1024px)" srcset="${work.srcDesktop}">
-//                   <source media="(min-width: 360px)" srcset="${work.srcMobile}">
-//                   <img 
-//                     loading="lazy"
-//                     src="${work.src}" 
-//                     alt="${work.title}" />
-//                 </picture>
-
-//               </a>
-//           </div>
-
-//           <div class="projects__row--text">
-//               <div class="text-container">
-//                   <h3 class="section-h3-title project-container--title">
-//                     ${work.title}
-//                   </h3>
-//                   <p class="paragraph-primary-16 text-container--description">${work.body}</p>
-
-//                   <a 
-//                       class="popup-link btn btn--size btn--theme"
-//                       rel="dns-prefetch" 
-//                       href="${work.linkSrc}"
-//                       target="_blank">
-//                       Case Study
-//                   </a>
-//               </div>
-//           </div>
-          
-//       </div>
-//       `;
-//   }
-
-//   section.innerHTML = output;
-// }
-
-// fetchUsers();
