@@ -335,6 +335,7 @@ h2.about__title {
     padding: 1rem 0;
     flex-wrap: wrap;
     width: 100%;
+    overflow: hidden;
 
     @include breakpoint(desktop) {
         width: 70%;

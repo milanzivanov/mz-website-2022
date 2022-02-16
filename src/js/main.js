@@ -172,6 +172,7 @@ particlesJS("particles-js", {
 });
 
 // AOS
+// animation
 AOS.init({});
 
 // json file with my fe works
@@ -198,7 +199,10 @@ function populateSkills(data) {
   for (const skill of skills) {
     output += `
       <div class="skill-icon">
-        <i class="${skill.iconClass}"></i>
+        <i 
+          class="${skill.iconClass}"
+          data-aos="fade-up">
+        </i>
         <p>${skill.iconTitle}</p>
       </div>
     `
@@ -272,6 +276,13 @@ function populateWorks(data) {
     rowTextStrong.textContent = "Skill used:";
     skillContainer.appendChild(rowTextStrong);
 
+    const skillList = document.createElement('ul');
+    skillList.classList.add("list-icon-container");
+    skillContainer.appendChild(skillList);
+
+    projectRowImg.appendChild(projectAnchorLink);
+    projectAnchorLink.appendChild(imgProject);
+    
     const btnTextRow = document.createElement("a");
     btnTextRow.className = "popup-link btn btn--size btn--theme";
     btnTextRow.href= work.linkSrc;
@@ -280,16 +291,9 @@ function populateWorks(data) {
     btnTextRow.textContent = "View It Here";
     textContainer.appendChild(btnTextRow);
 
-    const skillList = document.createElement('ul');
-    skillList.classList.add("list-icon-container");
-    skillContainer.appendChild(skillList);
-
-    projectRowImg.appendChild(projectAnchorLink);
-    projectAnchorLink.appendChild(imgProject);
-    
-    // 
     section.appendChild(containerProjects);
 
+    // work skill 
     const skillsUsed = work.technologiesUsed;
     for (const skill of skillsUsed) {
       const listItem = document.createElement('li');
