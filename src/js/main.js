@@ -4,7 +4,7 @@ jQuery(function () {
   $(".nav-toggle-btn").on("click", function (e) {
     $(".nav-toggle-btn, .nav-backdrop-container").toggleClass("active");
   });
-  
+
   $(".nav-backdrop-container").on("click", function (e) {
     $(".nav-toggle-btn, .nav-backdrop-container").removeClass("active");
   });
@@ -20,8 +20,7 @@ jQuery(function () {
     image: {
       // options for image content type
       titleSrc: "title",
-    }
-
+    },
   });
 
   // parallax
@@ -46,7 +45,6 @@ jQuery(function () {
       backToTop();
     });
     $(".back-to-top").on("click", function (e) {
-
       e.preventDefault();
 
       $(".show-fire").addClass("show");
@@ -59,25 +57,20 @@ jQuery(function () {
       );
     });
   }
-
-  // scroll to section
-  $('.scrollTo').on("click", function() {
-    const getElem = $(this).attr('href');
-    const targetDistance = 20;
-    if ($(getElem).length) {
-      const getOffset = $(getElem).offset().top;
-      $('html,body').animate({
-        scrollTop: getOffset - targetDistance
-      }, 100, 'linear');
-    }
-
-    $(".nav-toggle-btn, .nav-backdrop-container").removeClass("active");
-
-    return false;
-  });
-
 });
 
+// Scroll to section with event delagation better approach
+document
+  .querySelector(".nav-desktop__list")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Matching strategy
+    if (e.target.classList.contains("nav-desktop__link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  });
 
 // Slick
 $(".slick-slider").slick({
@@ -87,19 +80,19 @@ $(".slick-slider").slick({
   autoplay: true,
   autoplaySpeed: 10000,
   cssEase: "ease-out",
-  asNavFor: '.slider-nav',
+  asNavFor: ".slider-nav",
   prevArrow: $(".left-nav-custom"),
-  nextArrow: $(".right-nav-custom")
+  nextArrow: $(".right-nav-custom"),
 });
 
-$('.slider-nav').slick({
+$(".slider-nav").slick({
   arrows: false,
   slidesToShow: 3,
   slidesToScroll: 1,
-  asNavFor: '.slick-slider',
+  asNavFor: ".slick-slider",
   dots: false,
   centerMode: true,
-  focusOnSelect: true
+  focusOnSelect: true,
 });
 
 // particlesjs
@@ -177,7 +170,6 @@ AOS.init({});
 
 // json file with my fe works
 async function populate() {
-
   const requestURL = "https://milanzivanov.github.io/Data/works.json";
   const request = new Request(requestURL);
 
@@ -186,7 +178,6 @@ async function populate() {
 
   populateSkills(data);
   populateWorks(data);
-
 }
 
 // skills data
@@ -205,26 +196,23 @@ function populateSkills(data) {
         </i>
         <p>${skill.iconTitle}</p>
       </div>
-    `
+    `;
   }
 
   containerSkills.innerHTML = output;
-
 }
 
 // works data
 function populateWorks(data) {
-
   const section = document.querySelector(".projects__content");
   const works = data.works;
 
   for (const work of works) {
-
     const containerProjects = document.createElement("div");
     containerProjects.className = "projects__row projects__row--reverse";
     containerProjects.setAttribute("data-aos", "flip-left");
 
-    // 
+    //
     const projectRowImg = document.createElement("div");
     projectRowImg.classList.add("projects__row--img");
     containerProjects.appendChild(projectRowImg);
@@ -239,7 +227,7 @@ function populateWorks(data) {
     imgProject.src = work.src;
     imgProject.setAttribute("loading", "lazy");
 
-    // 
+    //
     const projectRowText = document.createElement("div");
     projectRowText.className = "projects__row--text";
     containerProjects.appendChild(projectRowText);
@@ -252,7 +240,7 @@ function populateWorks(data) {
     h3TitleRowText.className = "section-h3-title project-container--title";
     h3TitleRowText.textContent = work.title;
     textContainer.appendChild(h3TitleRowText);
-    
+
     const rowTextDiv = document.createElement("div");
     rowTextDiv.classList.add("text-container--description");
     textContainer.appendChild(rowTextDiv);
@@ -276,16 +264,16 @@ function populateWorks(data) {
     rowTextStrong.textContent = "Skill used:";
     skillContainer.appendChild(rowTextStrong);
 
-    const skillList = document.createElement('ul');
+    const skillList = document.createElement("ul");
     skillList.classList.add("list-icon-container");
     skillContainer.appendChild(skillList);
 
     projectRowImg.appendChild(projectAnchorLink);
     projectAnchorLink.appendChild(imgProject);
-    
+
     const btnTextRow = document.createElement("a");
     btnTextRow.className = "popup-link btn btn--size btn--theme";
-    btnTextRow.href= work.linkSrc;
+    btnTextRow.href = work.linkSrc;
     btnTextRow.target = "_blank";
     btnTextRow.rel = "dns-prefetch";
     btnTextRow.textContent = "View It Here";
@@ -293,18 +281,16 @@ function populateWorks(data) {
 
     section.appendChild(containerProjects);
 
-    // work skill 
+    // work skill
     const skillsUsed = work.technologiesUsed;
     for (const skill of skillsUsed) {
-      const listItem = document.createElement('li');
-      const listIcon = document.createElement('i');
+      const listItem = document.createElement("li");
+      const listIcon = document.createElement("i");
       listIcon.className = skill.svgIcon + " devicon";
       skillList.appendChild(listItem);
       listItem.appendChild(listIcon);
     }
-
   }
-
 }
 
 populate();
@@ -312,4 +298,3 @@ populate();
 // ********** set date ************
 const date = document.getElementById("date");
 date.innerHTML = new Date().getFullYear();
-
