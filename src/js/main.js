@@ -28,6 +28,7 @@ jQuery(function () {
   // let image = document.getElementsByClassName('about-container__box--parallax');
   // new simpleParallax(image, {});
 
+  /////////////////////
   // btt
   if ($(".back-to-top").length) {
     const scrollTrigger = 100, // px
@@ -59,6 +60,7 @@ jQuery(function () {
   }
 });
 
+/////////////////////////////
 // Scroll to section with event delagation better approach
 document
   .querySelector(".nav-desktop__list")
@@ -72,6 +74,52 @@ document
     }
   });
 
+/////////////////////
+// Remove active menu mobile on resize if it is active but this scenario is not real in real situation
+function removeMenuOnResizeIfActive(e) {
+  if (window.innerWidth > 800) {
+    $(".nav-toggle-btn, .nav-backdrop-container").removeClass("active");
+  }
+}
+
+removeMenuOnResizeIfActive();
+window.addEventListener("resize", removeMenuOnResizeIfActive);
+
+/////////////////////////////////
+// Remove active state from mobile menu with key escape
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    document
+      .querySelector(".nav-backdrop-container")
+      .classList.remove("active");
+    document.querySelector(".nav-toggle-btn").classList.remove("active");
+  }
+});
+
+////////////////////////
+// Nav link effect
+const nav = document.querySelector(".nav-desktop");
+
+// Refactoring
+const handleHover = function (e, opacity) {
+  if (e.target.classList.contains("nav-desktop__link")) {
+    const link = e.target;
+    const siblings = link
+      .closest(".nav-desktop")
+      .querySelectorAll(".nav-desktop__link");
+
+    siblings.forEach((el) => {
+      if (el !== link) {
+        el.style.opacity = this;
+      }
+    });
+  }
+};
+// desktop nav
+nav.addEventListener("mouseover", handleHover.bind(0.3));
+nav.addEventListener("mouseout", handleHover.bind(1));
+
+//////////////////////
 // Slick
 $(".slick-slider").slick({
   slidesToShow: 1,
@@ -95,6 +143,7 @@ $(".slider-nav").slick({
   focusOnSelect: true,
 });
 
+////////////////////
 // particlesjs
 particlesJS("particles-js", {
   particles: {
@@ -164,6 +213,7 @@ particlesJS("particles-js", {
   },
 });
 
+///////////////////
 // AOS
 // animation
 AOS.init({});
@@ -179,7 +229,7 @@ async function populate() {
   populateSkills(data);
   populateWorks(data);
 }
-
+///////////////////////
 // skills data
 function populateSkills(data) {
   const containerSkills = document.querySelector(".skills-container-icons");
@@ -295,6 +345,7 @@ function populateWorks(data) {
 
 populate();
 
-// ********** set date ************
+/////////////////////
+// Set date
 const date = document.getElementById("date");
 date.innerHTML = new Date().getFullYear();
