@@ -1,48 +1,46 @@
 h2.section-h2-title {
-    padding: 2rem 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $primary_font_family;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: #23a6d5;
+  padding: 2rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $primary_font_family;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #23a6d5;
 
-    @include breakpoint(desktop) {
-        font-size: 1.7rem;
-    }
-    @include breakpoint(large-desktop) {
-        padding: 2rem;
-        font-size: 2rem;
-    }
+  @include breakpoint(desktop) {
+    font-size: 1.7rem;
+  }
+  @include breakpoint(large-desktop) {
+    padding: 2rem;
+    font-size: 2rem;
+  }
 }
 
 h3.section-h3-title {
-    font-family: $primary_font_family;
-    color: $white;
-    font-size: 1.3rem;
-    padding-bottom: 1rem;
-    align-self: flex-start;
+  font-family: $primary_font_family;
+  color: $white;
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  align-self: flex-start;
 
-    @include breakpoint(desktop) {
-        font-size: 1.5rem;
-    }
-    @include breakpoint(large-desktop) {
-        font-size: 1.7rem;
-    }
+  @include breakpoint(desktop) {
+    font-size: 1.5rem;
+  }
+  @include breakpoint(large-desktop) {
+    font-size: 1.7rem;
+  }
 }
 
 .paragraph-primary-18 {
-    font-size: 1.125rem;
-    font-weight: 400;
-    text-align: inherit;
-    
-    @include breakpoint(desktop) {
-        text-align: justify;
-        font-size: 1rem;
-    }
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: inherit;
+
+  @include breakpoint(desktop) {
+    font-size: 1rem;
+  }
 }
 
 .paragraph-primary-16 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-

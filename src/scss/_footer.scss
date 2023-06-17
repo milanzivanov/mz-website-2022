@@ -1,145 +1,144 @@
 footer.footer-box {
-    background-color: #222;
-    display: flex;
-    position: relative;
-    padding: 3rem 0 8rem 0;
-    color: $white;
+  background-color: #222;
+  display: flex;
+  position: relative;
+  padding: 3rem 0 8rem 0;
+  color: $white;
 
-    background: 
-    linear-gradient(90deg,rgba(2,2,2,.8), $black),
+  background: linear-gradient(90deg, rgba(2, 2, 2, 0.8), $black),
     url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-    background-size: 400% 400%;
+  background-size: 400% 400%;
 }
 
 .footer-box__container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    small {
-        padding: 10px;
-        strong {
-            color: #23a6d5;
-        }
+  small {
+    padding: 10px;
+    strong {
+      color: #23a6d5;
     }
+  }
 }
 
 h3.footer-box__title {
-    font-size: 2rem;
-    color: #23a6d5;
-    text-align: center;
+  font-size: 2rem;
+  color: #23a6d5;
+  text-align: center;
 
-    @include breakpoint(desktop) {
-        text-align: left;
-    } 
+  @include breakpoint(desktop) {
+    text-align: left;
+  }
 }
 
 .footer-box__description {
-    display: flex;
-    width: 100%;
-    padding-bottom: 3rem;
+  display: flex;
+  width: 100%;
+  padding-bottom: 3rem;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  p {
+    padding: 1rem;
+    background-color: #1a1a1a;
+    border-radius: 5px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 80%;
     flex-direction: column;
     text-align: center;
     align-items: center;
-
-    p {
-        padding: 1rem;
-        background-color: #1a1a1a;
-        border-radius: 5px;
-    }
-    
-    @include breakpoint(desktop) {
-        width: 55%;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    } 
+  }
 }
 
 .footer-box__img {
-    width: 100px;
-    
-    @include breakpoint(desktop) {
-        width: 150px;
-        margin-right: 1rem;        
-    }
+  width: 100px;
+
+  @include breakpoint(desktop) {
+    width: 150px;
+    // margin-right: 1rem;
+  }
 }
 
 .footer-box__top {
-    display: flex;
-    border-bottom: 1px solid $white;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    flex-direction: column;
+  display: flex;
+  border-bottom: 1px solid $white;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
 
-    @include breakpoint(desktop) {
-        flex-direction: row;
-    } 
+  @include breakpoint(desktop) {
+    flex-direction: row;
+  }
 }
 
 .footer-box__item {
-    flex: 1 1 50%;
+  flex: 1 1 50%;
 }
 
 .footer-box__item--right {
-    flex: 1;
+  flex: 1;
 
-    @include breakpoint(desktop) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    } 
-
+  @include breakpoint(desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .footer-box__item--left {
-    flex: 2;
+  flex: 2;
 }
 
 ul.footer-nav {
-    display: flex;
-    list-style: none;
-    padding: 0.5rem;
-    width: 50%;
-    margin: auto;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  list-style: none;
+  padding: 0.5rem;
+  width: 50%;
+  margin: auto;
+  flex-direction: column;
+  align-items: flex-start;
 
-    @include breakpoint(tablet) {
-        align-items: center;
-        margin: 0;
-    } 
-    @include breakpoint(desktop) {
-        flex-direction: row;
-    } 
+  @include breakpoint(tablet) {
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
+  @include breakpoint(desktop) {
+    flex-direction: row;
+  }
 }
 
 a.footer-nav__link {
-    display: flex;
-    color: $white;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    transition: color 0.3s ease-in-out;
+  display: flex;
+  color: $white;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  transition: color 0.3s ease-in-out;
 
-    &:hover > * {
-        color: #23a6d5;
-    }
-    
-    @include breakpoint(desktop) {
-        padding-right: 1.3rem;
-        margin: 0;
-    }
+  &:hover > * {
+    color: #23a6d5;
+  }
+
+  @include breakpoint(desktop) {
+    padding-right: 1.3rem;
+    margin: 0;
+  }
 }
 
 span.name {
-    color: $white;
-    padding-left: .5rem;
+  color: $white;
+  padding-left: 0.5rem;
 }
 
 .footer-box__bottom {
-    text-align: center;
+  text-align: center;
 }

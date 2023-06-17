@@ -1,41 +1,42 @@
 @mixin flexCHV {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin displayHide {
-    display: none;
+  display: none;
 }
-
 
 /* ----------------- Media queris mobile first
 ----------------------------------------------------------------------- */
 
-@mixin breakpoint ($point) {
-    @if $point == 'mobile' {
-        @media only screen and (min-width: 360px) { @content; }
+@mixin breakpoint($point) {
+  @if $point == "mobile" {
+    @media only screen and (min-width: 360px) {
+      @content;
     }
-
-    @else if $point == 'tablet' {
-        @media only screen and (min-width: 768px) { @content; }
+  } @else if $point == "tablet" {
+    @media only screen and (min-width: 768px) {
+      @content;
     }
-
-    @else if $point == 'desktop' {
-        @media only screen and (min-width: 1024px) { @content; }
+  } @else if $point == "desktop" {
+    @media only screen and (min-width: 1024px) {
+      @content;
     }
-
-    @else if $point == 'large-desktop' {
-        @media only screen and (min-width: 1366px) { @content; }
+  } @else if $point == "large-desktop" {
+    @media only screen and (min-width: 1366px) {
+      @content;
     }
-
-    @else if $point == 'extra-large-desktop' {
-        @media only screen and (min-width: 1366px) { @content; }
+  } @else if $point == "extra-large-desktop" {
+    @media only screen and (min-width: 1566px) {
+      @content;
     }
-
-    @else {
-        @media only screen and (min-width: $point) { @content; }
+  } @else {
+    @media only screen and (min-width: $point) {
+      @content;
     }
+  }
 }
 
 /* ----------------- Media queris desktop first

@@ -9,605 +9,619 @@
 @import "footer";
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 main.container {
-    height: calc(100vh + 55px);
-    position: relative;
-    overflow: hidden;
+  height: calc(100vh + 55px);
+  position: relative;
+  overflow: hidden;
 
-    background: 
-    linear-gradient(90deg,rgba(2,2,2,.6), $black),
+  background: linear-gradient(90deg, rgba(2, 2, 2, 0.6), $black),
     url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-    background-size: cover;
-    
-    animation: none;
-    
-    @include breakpoint(desktop) {
-        background: 
-            linear-gradient(90deg,rgba(2,2,2,.8), $black),
-            url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-        background-size: 400% 400%;
-        height: 100vh;
-        animation: gradient 15s ease infinite;
-    }
+  background-size: cover;
+
+  animation: none;
+
+  @include breakpoint(desktop) {
+    background: linear-gradient(90deg, rgba(2, 2, 2, 0.8), $black),
+      url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+    background-size: 400% 400%;
+    height: 100vh;
+    animation: gradient 20s ease infinite;
+  }
+
+  background-color: #333;
 }
 
 #particles-js {
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 4;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
 }
 
 .hero-content {
-    height: calc(100% - 130px);   
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: calc(100% - 130px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  
-.hero-content__text { 
-    position: relative;
-    padding: .5rem;
-    width: 95%;
-    font-family: Montserrat,Open Sans,sans-serif;
-    color: $white;
-    font-style: normal;
-    text-align: left;
-    position: relative;
-    z-index: 5;
-    border-radius: 5px;
 
-    @include breakpoint(desktop) {
-        background-color: rgb(6, 6, 6, .7);
-        padding: 1.5rem;
-        background: linear-gradient(
-            45deg,rgb(44 134 169 / 70%),#063250,#0071bc, $black);
-        background-size: 400% 400%;
-        animation: gradient 15s ease infinite;
-        width: 55%;
-    }
+.hero-content__text {
+  position: relative;
+  width: 90%;
+  font-family: Montserrat, Open Sans, sans-serif;
+  color: $white;
+  font-style: normal;
+  text-align: left;
+  position: relative;
+  z-index: 5;
+  border-radius: 5px;
 }
 
 .hero-content__title {
-    width: 100%;
-    font-weight: 700;
-    font-size: 3.1rem;
-    line-height: 3.1rem;
+  width: 100%;
+  font-weight: 700;
+  font-size: 3.1rem;
+  line-height: 3.1rem;
 
-    @include breakpoint(desktop) {
-        font-weight: 600;
-        font-size: 3.3rem;
-        line-height: 3.3rem;
-    }
-    
-    @include breakpoint(large-desktop) {
-        font-size: 4rem;
-        line-height: 5rem;
-    }
+  @include breakpoint(tablet) {
+    font-size: 3.3rem;
+    line-height: 3.9rem;
+  }
+
+  @include breakpoint(desktop) {
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  @include breakpoint(large-desktop) {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+
+  @include breakpoint(extra-large-desktop) {
+    font-size: 6.5rem;
+    line-height: 7.5rem;
+  }
 }
 
 .hero__title--primary {
-    span {
-        text-shadow: 1px 1px 1px $black;
-        font-family: Poppins,Montserrat,sans-serif;
-        @include breakpoint(desktop) {
-            display: inline-block;
-        }
+  span {
+    text-shadow: 1px 1px 1px $black;
+    font-family: Poppins, Montserrat, sans-serif;
+    @include breakpoint(desktop) {
+      display: inline-block;
     }
+  }
 }
 
 .hero__title--secondery {
-    text-shadow: 1px 1px 1px $black;
-    font-weight: 700;
+  font-weight: 700;
 
-    span {
-        display: block;
-        font-family: Poppins,Montserrat,sans-serif;
-        color: $primary-blue;
-    }
+  span {
+    display: block;
+    font-family: Poppins, Montserrat, sans-serif;
+    background: linear-gradient(
+      90deg,
+      #333 -1.72%,
+      $primary-blue 54.05%,
+      #9845e8 99.78%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    background-size: 150% 150%;
+    animation: gradient 15s ease infinite;
+  }
 }
 
 .bg-particles {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
 }
 
 //////////////////
 // about
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-    padding: 0;
-    background-color: $ltGray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0;
+  background-color: $ltGray;
 
-    background-size: cover;
-    background-position: 50%;
+  background-size: cover;
+  background-position: 50%;
 
-    @include breakpoint(desktop) {
-        flex-direction: row;
-        padding: 2.5rem 0;
-        background: 
-        linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
-        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-    }
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    padding: 2.5rem 0;
+    background: linear-gradient(
+        90deg,
+        rgba(240, 248, 255, 0.8),
+        rgb(168 172 177)
+      ),
+      url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+  }
 
-    @include breakpoint(large-desktop) {
-        padding: 5rem 0;
-    }
-
+  @include breakpoint(large-desktop) {
+    padding: 5rem 0;
+  }
 }
 
 .about-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
 
-    @include breakpoint(desktop) {
-        flex-direction: row;
-        background-color: $white;
-    }
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    background-color: $white;
+  }
 
-    @include breakpoint(large-desktop) {
-        background: transparent;
-    }
+  // @include breakpoint(large-desktop) {
+  //   background: transparent;
+  // }
 }
 
 .about-container--reverse {
-    flex-direction: column;
+  flex-direction: column;
 
-    @include breakpoint(desktop) {
-        flex-direction: row-reverse;
-    }
+  @include breakpoint(desktop) {
+    flex-direction: row-reverse;
+  }
 }
 
 .about-container__box {
-    position: relative;
-    flex: 1 1 100%;
-    width: 100%;
-    
-    @include breakpoint(desktop) {
-        flex: 1 1 50%;
-        width: 50%;
-    }
+  position: relative;
+  flex: 1 1 100%;
+  width: 100%;
+
+  @include breakpoint(desktop) {
+    flex: 1 1 50%;
+    width: 50%;
+  }
 }
 
 .about-container__box--backdrop::after {
-    content: "";
-    background-color: rgba(0,0,0,.2);
-    position: absolute;
-    z-index: 4;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 4;
+  inset: 0 0 0 0;
 }
 
 .about-container__box--img {
-    aspect-ratio: 1 / 0.75;
-    object-fit: cover;
+  aspect-ratio: 1 / 0.75;
+  object-fit: cover;
 }
 
 .about-container__text {
-    position: relative;
-    z-index: 5;
-    background-color: $white;
-    box-shadow: 1px 1px 1px #d6e2ed;
-    font-size: 1rem;
-    border-radius: 5px;
+  position: relative;
+  z-index: 5;
+  background-color: $white;
+  box-shadow: 1px 1px 1px #d6e2ed;
+  font-size: 1rem;
+  border-radius: 5px;
 
-    @include breakpoint(desktop) {
-        box-shadow: none;
-        font-size: 1rem;
-    }
-    @include breakpoint(large-desktop) {
-        font-size: 1.125rem;
-    }
+  @include breakpoint(desktop) {
+    box-shadow: none;
+    font-size: 1rem;
+  }
+  @include breakpoint(large-desktop) {
+    font-size: 1.125rem;
+  }
 }
 
 .about-container__paragraph {
-    margin: 0 .5rem;
-    padding: 1rem 0.5rem;
-    text-align: inherit;
+  margin: 0 0.5rem;
+  padding: 1rem 0.5rem;
+  text-align: inherit;
 
-        @include breakpoint(desktop) {
-            margin: 0 1rem;
-            padding: 1rem 0;
-            text-align: justify;
-    }
+  @include breakpoint(desktop) {
+    margin: auto;
+    padding: 1rem 0;
+    width: 75%;
+  }
 }
 
 .about-container__paragraph--border-bottom {
-    border-bottom: 1px solid #d6e2ed;
+  border-bottom: 1px solid #d6e2ed;
 }
 
 h2.about__title {
-    z-index: 5;
-    text-align: left;
-    padding: .8rem;
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    font-size: 1rem;
-    letter-spacing: .5px;
+  z-index: 5;
+  text-align: left;
+  padding: 0.8rem;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 65%;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 
-    background: 
-        linear-gradient(45deg,rgba(44,134,169,.7),#063250,#0071bc,#000);
-    background-size: 200% 200%;
-    animation: gradient 15s ease infinite;
-    color: $white;
+  background: linear-gradient(
+    45deg,
+    rgba(44, 134, 169, 0.7),
+    #063250,
+    #0071bc,
+    #000
+  );
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+  color: $white;
 
-    @include breakpoint(tablet) {
-        font-size: 1.1rem;
-        padding: 1rem;
-        text-align: center;
-    }
-    @include breakpoint(desktop) {
-        background-size: 400% 400%;
-        font-size: 1.3rem;
-    }
+  @include breakpoint(tablet) {
+    width: 50%;
+    font-size: 1.1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  @include breakpoint(desktop) {
+    width: 65%;
+    background-size: 400% 400%;
+    font-size: 1.3rem;
+  }
 
-    @include breakpoint(large-desktop) {
-        font-size: 1.7rem;
-    }
-
+  @include breakpoint(large-desktop) {
+    font-size: 1.7rem;
+  }
 }
 
 .about__title--left {
-    width: 35%;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+  width: 35%;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .about__title--right {
-    width: 50%;
-    right: 0;
+  width: 50%;
+  right: auto;
+  left: 0;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+
+  @include breakpoint(large-desktop) {
     left: auto;
+    right: 0;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
+  }
 }
 
 .about__experience {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    li {
-        text-align: center;
-    }
+  li {
+    text-align: center;
+  }
 }
 
 .about-container__text--top {
-    right: 0;
+  right: 0;
 
-    @include breakpoint(desktop) {
-        right: 0;
-    }
-    @include breakpoint(large-desktop) {
-        right: 5rem;
-    }
+  @include breakpoint(desktop) {
+    right: 0;
+  }
 }
 
 .about-container__text--bottom {
-    left: 0;
-
-    @include breakpoint(desktop) {
-        left: 0;
-    }
-
-    @include breakpoint(large-desktop) {
-        left: 5rem;
-    }
+  left: 0;
 }
 
 //////////////////
 // skills and tools
 .skills {
-    background-color: #b6bbbf;
-    padding: 3rem 0;
+  background-color: #b6bbbf;
+  padding: 3rem 0;
 }
 
 .skills-container-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0;
-    flex-wrap: wrap;
-    width: 100%;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
 
-    @include breakpoint(desktop) {
-        width: 70%;
-        margin: auto;
-    }
-    @include breakpoint(large-desktop) {
-        width: 60%;
-        margin: auto;
-    }
-
+  @include breakpoint(desktop) {
+    width: 70%;
+    margin: auto;
+  }
+  @include breakpoint(large-desktop) {
+    width: 60%;
+    margin: auto;
+  }
 }
 
 .skill-icon {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 33.333%;    
-    padding: 0.5rem;
-    align-items: center;
-    font-size: 2.5rem;
-    color: #23a6d5;
-    margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 33.333%;
+  padding: 0.5rem;
+  align-items: center;
+  font-size: 2.5rem;
+  color: #23a6d5;
+  margin-bottom: 1.5rem;
 
+  @include breakpoint(desktop) {
+    flex: 1 1 15%;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  @include breakpoint(large-desktop) {
+    font-size: 3.5rem;
+  }
+
+  p {
+    padding-top: 0.5rem;
+    text-transform: uppercase;
+    color: #222;
+    font-size: 0.7rem;
     @include breakpoint(desktop) {
-        flex: 1 1 15%;
-        font-size: 3rem;
-        margin-bottom: 2rem;
+      font-size: 1rem;
     }
-    @include breakpoint(large-desktop) {
-        font-size: 3.5rem;
-    }
-    
-    p {
-        padding-top: .5rem;
-        text-transform: uppercase;
-        color: #222;
-        font-size: .7rem;
-        @include breakpoint(desktop) {
-            font-size: 1rem;
-        }
-    }
+  }
 }
-
 
 //////////////////
 // projects
 .projects {
-    background-color: $black;
-    overflow: hidden;
+  background-color: $black;
+  overflow: hidden;
 }
 
 .projects-title {
-    background-color: $ltBlack;
+  background-color: $ltBlack;
 
-    @include breakpoint(desktop) {
-        background-color: transparent;
-    }
+  @include breakpoint(desktop) {
+    background-color: transparent;
+  }
 }
 
 .projects__row {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
 
-    @include breakpoint(desktop) {
-        padding-bottom: 5rem;
-        flex-direction: row;
-        grid-gap: 5rem;
-    }
+  background-color: #b5bbbe;
+  border-radius: 0;
+  padding: 1rem;
+
+  @include breakpoint(desktop) {
+    border-radius: 20px;
+    // padding-bottom: 5rem;
+    grid-gap: 5rem;
+  }
+
+  @include breakpoint(large-desktop) {
+    margin-bottom: 5rem;
+    flex-direction: row;
+    grid-gap: 5rem;
+  }
 }
 
-.projects__row:nth-child(even) {
-    flex-direction: column;
-
-    @include breakpoint(desktop) {
-        flex-direction: row-reverse;
-    }
-
-}
+// .projects__row:nth-child(even) {
+//   flex-direction: row;
+// }
 
 .projects__row--img {
-    flex: 1.5;
+  flex: 1.5;
 
-    @include breakpoint(tablet) {
-        align-self: center;
-    }
+  @include breakpoint(tablet) {
+    align-self: center;
+  }
 
-    @include breakpoint(desktop) {
-        align-self: flex-end;
-    }
+  @include breakpoint(desktop) {
+    flex: 1;
+    // align-self: flex-end;
+  }
 }
 
 .projects__row--text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .text-container {
-    display: flex;
-    flex-direction: column;
-    background-color: #f0f8ff;
-    background: 
-        linear-gradient(90deg,rgba(2,2,2,.65), $black),
-        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-        background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff;
+  background: linear-gradient(90deg, rgba(2, 2, 2, 0.65), $black),
+    url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+  background-size: 100% 100%;
 
-    padding: 2rem;
-    align-items: flex-end;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px $ltBlack;
-
+  padding: 2rem;
+  align-items: flex-end;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px $ltBlack;
 }
 
 .text-container--description {
-    width: 100%;
-    box-shadow: 1px 1px 1px #d6e2ed;
-    margin-bottom: 3rem;
-    letter-spacing: .3px;
-    padding: 0.5rem;
-    background-color: $white;
-    border-radius: 5px;
+  width: 100%;
+  box-shadow: 1px 1px 1px #d6e2ed;
+  margin-bottom: 3rem;
+  letter-spacing: 0.3px;
+  padding: 0.5rem;
+  background-color: $white;
+  border-radius: 5px;
 }
 
 p.paragraph-text {
-    padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 p.paragraph-time {
-    padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .skill-container {
-    background-color: #d5dbe0;
-    border-radius: 5px;
-    padding: 0.5rem;
+  background-color: #d5dbe0;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 
 ul.list-icon-container {
-    display: flex;
-    flex-wrap: wrap;
-    li {
-        padding: .3rem 0.3rem 0.3rem 0;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    padding: 0.3rem 0.3rem 0.3rem 0;
+  }
 }
 
 p.paragraph-strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 i.devicon {
-    font-size: 1.5rem;
-    color: $secondery-blue;
-    margin-right: .3rem;
+  font-size: 1.5rem;
+  color: $secondery-blue;
+  margin-right: 0.3rem;
 }
 
 //////////////////////
 // contact
 section.contact {
-    padding: 0 0 2rem;
-    background-color: $ltGray;
-    background: 
-        linear-gradient(90deg,rgba(240,248,255,.8),rgb(168 172 177)),
-        url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-    background-size: cover;
-    background-position: 50%;
+  padding: 0 0 2rem;
+  background-color: $ltGray;
+  background: linear-gradient(90deg, rgba(240, 248, 255, 0.8), rgb(168 172 177)),
+    url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+  background-size: cover;
+  background-position: 50%;
 
-    @include breakpoint(desktop) {
-        padding: 0 0 2.5rem;
-    }
-    @include breakpoint(large-desktop) {
-        padding: 0 0 2rem;
-    }
+  @include breakpoint(desktop) {
+    padding: 0 0 2.5rem;
+  }
+  @include breakpoint(large-desktop) {
+    padding: 0 0 2rem;
+  }
 }
 
 .contact__form-container {
-    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-    background: $white;
-    padding: 1rem;
-    max-width: 60rem;
-    text-align: right;
-    border-radius: 5px;
-    margin: 0 auto;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  background: $white;
+  padding: 1rem;
+  max-width: 60rem;
+  text-align: right;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .contact__form-label {
-    color: $ltBlack;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 700;
-    padding: 1rem;
-    display: block;
-    text-align: left;
+  color: $ltBlack;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 1rem;
+  display: block;
+  text-align: left;
 }
 
 .contact__form-input {
-    color: $ltBlack;
-    padding: 1rem;
-    width: 100%;
-    border: 1px solid #d6e2ed;
-    font-size: 1rem;
-    letter-spacing: 0px;
-    background: $ltGray;
-    border-radius: 5px;
-    font-weight: 600;
+  color: $ltBlack;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #d6e2ed;
+  font-size: 1rem;
+  letter-spacing: 0px;
+  background: $ltGray;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
 .contact__form-input--space {
-    margin: 0 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
 
 ////////////////////
 // BTT
 .back-to-top-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .back-to-top {
-    display: none;
-    background-color: rgb(193 179 179 / 70%);
-    position: fixed;
-    padding: 10px;
-    justify-content: center;
-    bottom: 0;
-    margin: 5px;
-    z-index: 20;
-    border-radius: 5px;
-    box-shadow: 0px 1px 5px #d6e2ed;
+  display: none;
+  background-color: rgb(193 179 179 / 70%);
+  position: fixed;
+  padding: 10px;
+  justify-content: center;
+  bottom: 0;
+  margin: 5px;
+  z-index: 20;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px #d6e2ed;
 }
 .back-to-top.show {
-    display: flex;
+  display: flex;
 }
 
 a.btn-to-top {
-    height: 3.5rem;
-    width: 3.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
 
-    @include breakpoint(desktop) {
-        height: 4rem;
-        width: 4rem;
-    } 
+  @include breakpoint(desktop) {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 
 a.show-fire {
-    position: absolute;
-    height: 3.5rem;
-    width: 3.5rem;
-    display: none;
+  position: absolute;
+  height: 3.5rem;
+  width: 3.5rem;
+  display: none;
 
-    @include breakpoint(desktop) {
-        height: 4rem;
-        width: 4rem;
-    } 
+  @include breakpoint(desktop) {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 
 a.show-fire.show {
-    display: block;
+  display: block;
 }
 
 ///////////////////
 // @keyframes
 @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -6,16 +6,15 @@ I wanted to share my own boilerplate that I use for simple front-end websites th
 
 ## Quickstart guide
 
-* Clone or download this Git repo onto your computer.
-* Install [Node.js](https://nodejs.org/en/) if you don't have it yet.
-* Run `npm install`
-* Run `gulp` to run the default Gulp task
+- Clone or download this Git repo onto your computer.
+- Install [Node.js](https://nodejs.org/en/) if you don't have it yet.
+- Run `npm install`
+- Run `npm run build` to run the default Gulp task
 
 In this proejct, Gulp is configured to run the following functions:
 
-* Compile the SCSS files to CSS
-* Autoprefix and minify the CSS file
-* Concatenate the JS files
-* Uglify the JS files
-* Move final CSS and JS files to the `/dist` folder
- 
+- Compile the SCSS files to CSS
+- Autoprefix and minify the CSS file
+- Concatenate the JS files
+- Uglify the JS files
+- Move final CSS and JS files to the `/dist` folder
