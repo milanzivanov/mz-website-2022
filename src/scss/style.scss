@@ -170,6 +170,15 @@ main.container {
   }
 }
 
+.about-rounded-container {
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  @include breakpoint(desktop) {
+    border-radius: 20px;
+  }
+}
+
 .about-container {
   position: relative;
   display: flex;
@@ -178,14 +187,15 @@ main.container {
   flex-direction: column;
   overflow: hidden;
 
+  border-radius: 20px;
+  margin: 1rem 0;
+
   @include breakpoint(desktop) {
+    border-radius: 0;
     flex-direction: row;
     background-color: $white;
+    margin: 0;
   }
-
-  // @include breakpoint(large-desktop) {
-  //   background: transparent;
-  // }
 }
 
 .about-container--reverse {
@@ -255,14 +265,15 @@ main.container {
 
 h2.about__title {
   z-index: 5;
-  text-align: left;
   padding: 0.8rem;
   position: absolute;
-  transform: translateY(-50%);
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 65%;
   font-size: 1rem;
   letter-spacing: 0.5px;
+  border-radius: 5px;
 
   background: linear-gradient(
     45deg,
@@ -294,22 +305,24 @@ h2.about__title {
 
 .about__title--left {
   width: 35%;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  // border-bottom-right-radius: 5px;
+  // border-top-right-radius: 5px;
 }
 
 .about__title--right {
   width: 50%;
   right: auto;
   left: 0;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  // border-bottom-right-radius: 5px;
+  // border-top-right-radius: 5px;
 
   @include breakpoint(large-desktop) {
     left: auto;
     right: 0;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    // border-bottom-right-radius: 0;
+    // border-top-right-radius: 0;
+    // border-bottom-left-radius: 5px;
+    // border-top-left-radius: 5px;
   }
 }
 
@@ -532,7 +545,7 @@ section.contact {
   padding: 1rem;
   max-width: 60rem;
   text-align: right;
-  border-radius: 5px;
+  border-radius: 20px;
   margin: 0 auto;
 }
 

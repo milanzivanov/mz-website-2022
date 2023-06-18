@@ -120,6 +120,32 @@ nav.addEventListener("mouseover", handleHover.bind(0.3));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
 //////////////////////
+// StickyNav
+const header = document.querySelector(".header");
+const main = document.querySelector("main");
+const headerHeight = header.getBoundingClientRect().height;
+console.log(headerHeight);
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${headerHeight}px`,
+});
+
+headerObserver.observe(main);
+
+//////////////////////
 // Slick
 $(".slick-slider").slick({
   slidesToShow: 1,

@@ -60,7 +60,10 @@
   @include breakpoint(desktop) {
     font-size: 1rem;
   }
-  //   @include breakpoint(large-desktop) {
-  //     font-size: 1.125rem;
-  //   }
+}
+
+.contact__btn {
+  @include breakpoint(large-desktop) {
+    width: 25%;
+  }
 }
