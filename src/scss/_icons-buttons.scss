@@ -39,9 +39,6 @@
   @include breakpoint(tablet) {
     width: 30%;
   }
-  @include breakpoint(large-desktop) {
-    width: 45%;
-  }
 }
 
 .btn:hover {

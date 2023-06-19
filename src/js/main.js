@@ -124,11 +124,11 @@ nav.addEventListener("mouseout", handleHover.bind(1));
 const header = document.querySelector(".header");
 const main = document.querySelector("main");
 const headerHeight = header.getBoundingClientRect().height;
-console.log(headerHeight);
+// console.log(headerHeight);
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  console.log(entry);
+  // console.log(entry);
 
   if (!entry.isIntersecting) {
     header.classList.add("sticky");
