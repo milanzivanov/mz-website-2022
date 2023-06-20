@@ -285,7 +285,7 @@ function populateWorks(data) {
 
   for (const work of works) {
     const containerProjects = document.createElement("div");
-    containerProjects.className = "projects__row projects__row--reverse";
+    containerProjects.className = "projects__row";
     containerProjects.setAttribute("data-aos", "flip-left");
 
     //
@@ -322,12 +322,12 @@ function populateWorks(data) {
     textContainer.appendChild(rowTextDiv);
 
     const rowTextParagraph = document.createElement("p");
-    rowTextParagraph.className = "paragraph-primary-16 paragraph-text";
+    rowTextParagraph.className = "paragraph-text paragraph-text--border-bottom";
     rowTextParagraph.textContent = work.body;
     rowTextDiv.appendChild(rowTextParagraph);
 
     const rowTextTime = document.createElement("p");
-    rowTextTime.classList.add("paragraph-time");
+    rowTextTime.classList.add("paragraph-text");
     rowTextTime.textContent = work.projectTime;
     rowTextDiv.appendChild(rowTextTime);
 

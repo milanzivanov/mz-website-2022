@@ -46,14 +46,14 @@ header.header.sticky {
     margin: 0 auto 0 3rem;
   }
 
-  ul.nav-desktop__list {
+  .nav-desktop__list {
     display: flex;
   }
 
   .nav-desktop__link {
     display: inline-block;
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin-left: 1.5rem;
     transition: 0.5ms all ease-in-out;
     font-family: $secondery_font_family;
@@ -61,6 +61,12 @@ header.header.sticky {
     &:hover {
       color: #03a9f4;
     }
+  }
+}
+
+@include breakpoint(large-desktop) {
+  .nav-desktop__link {
+    font-size: 1.3rem;
   }
 }
 
