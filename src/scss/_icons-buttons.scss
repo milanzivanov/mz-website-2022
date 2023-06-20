@@ -42,6 +42,9 @@
   @include breakpoint(large-desktop) {
     width: 45%;
   }
+  @include breakpoint(extra-large-desktop) {
+    width: 30%;
+  }
 }
 
 .btn:hover {
