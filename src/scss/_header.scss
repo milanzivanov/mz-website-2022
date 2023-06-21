@@ -76,7 +76,7 @@ header.header.sticky {
 
 .header__btn {
   position: relative;
-  z-index: 101;
+  z-index: 10;
   display: inline-block;
   margin-right: 5%;
 
@@ -126,10 +126,6 @@ header.header.sticky {
   background-color: #fff;
   text-align: center;
   border-radius: 5px;
-
-  // position: fixed;
-  // top: 8px;
-  // right: 5%;
 
   @include breakpoint(desktop) {
     width: 70px;
@@ -222,12 +218,10 @@ nav.nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
 
-  height: 100%;
-  width: 100%;
-  right: 0;
-  position: absolute;
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 10;
 
   @include breakpoint(desktop) {
     width: 50%;
