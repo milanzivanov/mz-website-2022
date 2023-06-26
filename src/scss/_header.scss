@@ -90,7 +90,7 @@ header.header.sticky {
   display: none;
   @include breakpoint(desktop) {
     display: flex;
-    background-color: hsl(0deg 3% 64%);
+    background-color: #ccc;
     padding: 0.5rem;
     border-radius: 5px;
   }

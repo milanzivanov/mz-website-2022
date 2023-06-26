@@ -9,47 +9,48 @@
 @import "footer";
 
 html {
+  font-size: 112.5%; /*18px*/
   scroll-behavior: smooth;
-  font-size: 18px;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #444;
 }
-
-main.container {
+.container {
   height: calc(100vh + 55px);
   position: relative;
   overflow: hidden;
+  background-color: #222;
 
-  background: linear-gradient(90deg, rgba(2, 2, 2, 0.6), $black),
+  background: linear-gradient(90deg, rgba(2, 2, 2, 0.75), $black),
     url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
   background-size: cover;
-
   animation: none;
 
-  @include breakpoint(desktop) {
-    background: linear-gradient(90deg, rgba(2, 2, 2, 0.8), $black),
-      url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
-    background-size: 400% 400%;
+  @include breakpoint(large-desktop) {
     height: 100vh;
-    animation: gradient 20s ease infinite;
+    background: linear-gradient(90deg, rgba(2, 2, 2, 1), #333),
+      url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+    background-size: cover;
+    // background-size: 400% 400%;
+    // animation: gradient 20s ease infinite;
   }
-
-  background-color: #333;
 }
 
-#particles-js {
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 4;
-}
+// #particles-js {
+//   height: 100vh;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 4;
+// }
 
-.hero-content {
+.hero-container {
   height: calc(100% - 130px);
   width: 100%;
   display: flex;
@@ -57,16 +58,51 @@ main.container {
   align-items: center;
 }
 
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 1rem 0;
+
+  @include breakpoint(tablet) {
+    background: linear-gradient(-90deg, rgba(2, 2, 2, 0.8), #222),
+      url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+    // background-size: 400% 400%;
+    // animation: gradient 20s ease infinite;
+  }
+  @include breakpoint(large-desktop) {
+    padding: 1rem 5%;
+  }
+}
+
+.hero-content__illustration {
+  display: none;
+
+  @include breakpoint(large-desktop) {
+    display: flex;
+  }
+}
+
+.svg-hero-illustration {
+  width: 25vw;
+}
+
 .hero-content__text {
   position: relative;
   width: 90%;
   font-family: Montserrat, Open Sans, sans-serif;
   color: $white;
+  // color: #0070d1;
   font-style: normal;
   text-align: left;
   position: relative;
   z-index: 5;
-  border-radius: 5px;
+
+  @include breakpoint(large-desktop) {
+    width: inherit;
+  }
 }
 
 .hero-content__title {
@@ -99,7 +135,7 @@ main.container {
 
 .hero__title--primary {
   span {
-    text-shadow: 1px 1px 1px $black;
+    // text-shadow: 1px 1px 1px $black;
     font-family: Poppins, Montserrat, sans-serif;
     @include breakpoint(desktop) {
       display: inline-block;
@@ -116,7 +152,7 @@ main.container {
     background: linear-gradient(
       90deg,
       #333 -1.72%,
-      $primary-blue 54.05%,
+      #0071d1 54.05%,
       #9845e8 99.78%
     );
 
@@ -124,20 +160,20 @@ main.container {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-    background-size: 150% 150%;
+    background-size: 400%;
     animation: gradient 15s ease infinite;
   }
 }
 
-.bg-particles {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-}
+// .bg-particles {
+//   position: absolute;
+//   display: block;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   z-index: 0;
+// }
 
 //////////////////
 // about

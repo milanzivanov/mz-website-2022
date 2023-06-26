@@ -23,11 +23,6 @@ jQuery(function () {
     },
   });
 
-  // parallax
-  // not in use for now
-  // let image = document.getElementsByClassName('about-container__box--parallax');
-  // new simpleParallax(image, {});
-
   /////////////////////
   // btt
   if ($(".back-to-top").length) {
@@ -87,7 +82,7 @@ window.addEventListener("resize", removeMenuOnResizeIfActive);
 
 /////////////////////////////////
 // Remove active state from mobile menu with key escape
-document.addEventListener("keydown", function (e) {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     document
       .querySelector(".nav-backdrop-container")
@@ -171,73 +166,73 @@ $(".slider-nav").slick({
 
 ////////////////////
 // particlesjs
-particlesJS("particles-js", {
-  particles: {
-    number: {
-      value: 65,
-    },
-    color: {
-      value: "#ddd",
-    },
-    shape: {
-      type: "circle",
-      stroke: {
-        width: 1,
-        color: "#ddd",
-      },
-    },
-    image: {
-      src: "some link",
-    },
-    opacity: {
-      value: 0.5,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 1,
-      },
-    },
-    size: {
-      value: 3,
-      random: true,
-      anim: {
-        enable: false,
-        speed: 100,
-        size_min: 0.1,
-        sync: false,
-      },
-    },
-    line_linked: {
-      enable: true,
-      distance: 150,
-      color: "#ddd",
-      width: 1,
-    },
-    move: {
-      enable: true,
-      speed: 3,
-      direction: "none",
-    },
-  },
-  interactivity: {
-    events: {
-      onhover: {
-        enable: true,
-        mode: "repulse",
-      },
-      onclick: {
-        enable: true,
-        mode: "push",
-      },
-    },
-    modes: {
-      repulse: {
-        distance: 50,
-        duration: 0.4,
-      },
-    },
-  },
-});
+// particlesJS("particles-js", {
+//   particles: {
+//     number: {
+//       value: 65,
+//     },
+//     color: {
+//       value: "#ddd",
+//     },
+//     shape: {
+//       type: "circle",
+//       stroke: {
+//         width: 1,
+//         color: "#ddd",
+//       },
+//     },
+//     image: {
+//       src: "some link",
+//     },
+//     opacity: {
+//       value: 0.5,
+//       random: true,
+//       anim: {
+//         enable: false,
+//         speed: 1,
+//       },
+//     },
+//     size: {
+//       value: 3,
+//       random: true,
+//       anim: {
+//         enable: false,
+//         speed: 100,
+//         size_min: 0.1,
+//         sync: false,
+//       },
+//     },
+//     line_linked: {
+//       enable: true,
+//       distance: 150,
+//       color: "#ddd",
+//       width: 1,
+//     },
+//     move: {
+//       enable: true,
+//       speed: 1,
+//       direction: "none",
+//     },
+//   },
+//   interactivity: {
+//     events: {
+//       onhover: {
+//         enable: true,
+//         mode: "repulse",
+//       },
+//       onclick: {
+//         enable: true,
+//         mode: "push",
+//       },
+//     },
+//     modes: {
+//       repulse: {
+//         distance: 50,
+//         duration: 0.4,
+//       },
+//     },
+//   },
+// });
 
 ///////////////////
 // AOS
