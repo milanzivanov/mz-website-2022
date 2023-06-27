@@ -30,25 +30,16 @@ body {
   background-size: cover;
   animation: none;
 
-  @include breakpoint(large-desktop) {
+  @include breakpoint(tablet) {
     height: 100vh;
     background: linear-gradient(90deg, rgba(2, 2, 2, 1), #333),
       url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
     background-size: cover;
+    // not in use for now
     // background-size: 400% 400%;
     // animation: gradient 20s ease infinite;
   }
 }
-
-// #particles-js {
-//   height: 100vh;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 4;
-// }
 
 .hero-container {
   height: calc(100% - 130px);
@@ -69,6 +60,7 @@ body {
   @include breakpoint(tablet) {
     background: linear-gradient(-90deg, rgba(2, 2, 2, 0.8), #222),
       url("https://ik.imagekit.io/milanz/milanzivanov_com/personal-site-2022/common-bg_p7seAoLVe.svg");
+    // not in use for now
     // background-size: 400% 400%;
     // animation: gradient 20s ease infinite;
   }
@@ -94,7 +86,6 @@ body {
   width: 90%;
   font-family: Montserrat, Open Sans, sans-serif;
   color: $white;
-  // color: #0070d1;
   font-style: normal;
   text-align: left;
   position: relative;
@@ -135,7 +126,6 @@ body {
 
 .hero__title--primary {
   span {
-    // text-shadow: 1px 1px 1px $black;
     font-family: Poppins, Montserrat, sans-serif;
     @include breakpoint(desktop) {
       display: inline-block;
@@ -164,16 +154,6 @@ body {
     animation: gradient 15s ease infinite;
   }
 }
-
-// .bg-particles {
-//   position: absolute;
-//   display: block;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   z-index: 0;
-// }
 
 //////////////////
 // about
