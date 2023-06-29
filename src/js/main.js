@@ -1,7 +1,8 @@
 jQuery(function () {
   "use strict";
   // open mobile menu and hamburger btn
-  $(".nav-toggle-btn").on("click", function (e) {
+
+  $(".nav-toggle-btn, .nav-backdrop-container").on("click", function (e) {
     $(".nav-toggle-btn, .nav-backdrop-container").toggleClass("active");
   });
 
@@ -25,34 +26,17 @@ jQuery(function () {
 
   /////////////////////
   // btt
-  if ($(".back-to-top").length) {
-    const scrollTrigger = 100, // px
-      backToTop = function () {
-        const scrollTop = $(window).scrollTop();
-        if (scrollTop > scrollTrigger) {
-          $(".back-to-top").addClass("show");
-        } else {
-          $(".back-to-top").removeClass("show");
-          $(".show-fire").removeClass("show");
-        }
-      };
-    backToTop();
-    $(window).on("scroll", function () {
-      backToTop();
-    });
-    $(".back-to-top").on("click", function (e) {
-      e.preventDefault();
+  $(window).on("scroll", function () {
+    const scrollTop = $(window).scrollTop();
+    $(".back-to-top").toggleClass("show", scrollTop > 100);
+    $(".show-fire").toggleClass("show", scrollTop > 100);
+  });
 
-      $(".show-fire").addClass("show");
-
-      $("html,body").animate(
-        {
-          scrollTop: 0,
-        },
-        50
-      );
-    });
-  }
+  $(".back-to-top").on("click", function (e) {
+    e.preventDefault();
+    $(".show-fire").addClass("show");
+    $("html,body").animate({ scrollTop: 0 }, 50);
+  });
 });
 
 /////////////////////////////

@@ -28,8 +28,8 @@ header.header.sticky {
   }
 
   @include breakpoint(desktop) {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     margin-left: 0;
   }
 }
